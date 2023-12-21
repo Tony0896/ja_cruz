@@ -14,6 +14,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
 <!-- Compiled and minified Bootstrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
 	<!--
 		Load Fonts
 	-->
@@ -182,6 +184,12 @@
 							<a href="#galeria" id="ref_galery">
 								<span class="material-icons">collections</span>
 								<span class="link">Galería</span>
+							</a>
+						</li>
+						<li id="li_plantillas" class="li-menu">
+							<a href="#plantillas" id="ref_plantillas">
+								<span class="material-icons">screenshot_monitor</span>
+								<span class="link">Plantillas</span>
 							</a>
 						</li>
 					</ul>
@@ -646,6 +654,73 @@
 				</div>
 			</div>
 
+			<div class="card-inner" id="plantillas">
+				<div class="card-wrap">
+					<div class="content about">
+
+						<!-- title -->
+						<div class="title"><span class="first-word">P</span>lantilllas</div>
+
+						<!-- content -->
+						<div class="row">
+
+							<!-- skill item -->
+							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+								<div class="title"><span class="first-word">No. 1</span> Velocity </div>
+								<img src="./img/plantillas/velocity.png" style="width: inherit;" id="plantilla_1" onclick="plantilla(this.id)">
+							</div>
+
+							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+								<div class="title"><span class="first-word">No. 2</span> Solar </div>
+								<img src="./img/plantillas/solar.png" style="width: inherit;" id="plantilla_2" onclick="plantilla(this.id)">
+							</div>
+
+							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+								<div class="title"><span class="first-word">No. 3</span> Simple </div>
+								<img src="./img/plantillas/simple.png" style="width: inherit;" id="plantilla_3" onclick="plantilla(this.id)">
+							</div>
+
+							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+								<div class="title"><span class="first-word">No. 4</span> Nurgo </div>
+								<img src="./img/plantillas/nurgo.png" style="width: inherit;" id="plantilla_4" onclick="plantilla(this.id)">
+							</div>
+
+							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+								<div class="title"><span class="first-word">No. 5</span> Little </div>
+								<img src="./img/plantillas/little.png" style="width: inherit;" id="plantilla_5" onclick="plantilla(this.id)">
+							</div>
+
+							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+								<div class="title"><span class="first-word">No. 6</span> LimeLight </div>
+								<img src="./img/plantillas/limelight.png" style="width: inherit;" id="plantilla_6" onclick="plantilla(this.id)">
+							</div>
+
+							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+								<div class="title"><span class="first-word">No. 7</span> Koppe </div>
+								<img src="./img/plantillas/koppe.png" style="width: inherit;" id="plantilla_7" onclick="plantilla(this.id)">
+							</div>
+
+							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+								<div class="title"><span class="first-word">No. 8</span> Inance </div>
+								<img src="./img/plantillas/inance.png" style="width: inherit;" id="plantilla_8" onclick="plantilla(this.id)">
+							</div>
+
+							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+								<div class="title"><span class="first-word">No. 9</span> Heustonn </div>
+								<img src="./img/plantillas/heustonn.png" style="width: inherit;" id="plantilla_9" onclick="plantilla(this.id)">
+							</div>
+
+							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+								<div class="title"><span class="first-word">No. 10</span> Template </div>
+								<img src="./img/plantillas/template.png" style="width: inherit;" id="plantilla_10" onclick="plantilla(this.id)">
+							</div>
+
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
 		</div>
 	</div>
 	<div id="popUp" class="modal">
@@ -653,35 +728,51 @@
 		<img class="modal-content" id="img01">
 	  <div id="caption"></div>
 	</div>
+
+	<div id="popUp1" class="modal">
+		<span class="close">&times;</span>
+		<div class="col-lg-12" style="margin-top: -40px;">
+			<iframe id="frameHTML" src="" style="width: 100%;height: 90vh;"></iframe>
+		</div>
+	</div>
+
 	<link rel="stylesheet" href="./css/bar.css">
 	<script>
 		
 		$("#ref_about").click(function(){
 			$(".card-inner").removeClass("active");
 			$("#about-card").addClass("active");
-			$("#li_abaout").addClass("active");
+			
 			$(".li-menu").removeClass("active");
+			$("#li_abaout").addClass("active");
 		});
 		$("#ref_resumen").click(function(){
 			$(".card-inner").removeClass("active");
 			$("#resume-card").addClass("active");
 			
-			$("#li_resumen").addClass("active");
 			$(".li-menu").removeClass("active");
+			$("#li_resumen").addClass("active");
 		});
 		$("#ref_mail").click(function(){
 			$(".card-inner").removeClass("active");
 			$("#conocimientos").addClass("active");
 			
-			$("#li_conocimientos").addClass("active");
 			$(".li-menu").removeClass("active");
+			$("#li_conocimientos").addClass("active");
 		});
 		$("#ref_galery").click(function(){
 			$(".card-inner").removeClass("active");
 			$("#galeria").addClass("active");
 			
-			$("#li_galeria").addClass("active");
 			$(".li-menu").removeClass("active");
+			$("#li_galeria").addClass("active");
+		});
+		$("#ref_plantillas").click(function(){
+			$(".card-inner").removeClass("active");
+			$("#plantillas").addClass("active");
+			
+			$(".li-menu").removeClass("active");
+			$("#li_plantillas").addClass("active");
 		});
 
 		// Call carousel manually
@@ -699,21 +790,60 @@
 		});
 
 		function Imgs (imga){
-		var modal = document.getElementById('popUp');
-		var img = document.getElementById(imga);
-		var modalImg = document.getElementById("img01");
-		var captionText = document.getElementById("caption");
-			modal.style.display = "block";
-			modalImg.src = img.src;
-			captionText.innerHTML = img.alt;
+			var modal = document.getElementById('popUp');
+			var img = document.getElementById(imga);
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+				modal.style.display = "block";
+				modalImg.src = img.src;
+				captionText.innerHTML = img.alt;
 
-		var span = document.getElementsByClassName("close")[0];
-		var span2 = document.getElementsByClassName("modal")[0];
-		span2.onclick = function() { 
-		modal.style.display = "none";
+			var span = document.getElementsByClassName("close")[0];
+			var span2 = document.getElementsByClassName("modal")[0];
+			span2.onclick = function() { 
+				modal.style.display = "none";
+			}
+			span.onclick = function() { 
+				modal.style.display = "none";
+			}
 		}
-		span.onclick = function() { 
-		modal.style.display = "none";
-		}
+
+		function plantilla(id){
+			var modal = document.getElementById('popUp1');
+			if(id == 'plantilla_1'){
+				$("#frameHTML").prop("src", "./plantillas/velocy/Velocity.html")
+			} else if(id == 'plantilla_2'){
+				$("#frameHTML").prop("src", "./plantillas/solar/index.html")
+			} else if(id == 'plantilla_3'){
+				$("#frameHTML").prop("src", "./plantillas/simple/index.html")
+			} else if(id == 'plantilla_4'){
+				$("#frameHTML").prop("src", "./plantillas/nurgo/index.html")
+			} else if(id == 'plantilla_5'){
+				$("#frameHTML").prop("src", "./plantillas/little/index.html")
+			} else if(id == 'plantilla_6'){
+				$("#frameHTML").prop("src", "./plantillas/limelight/index.html")
+			} else if(id == 'plantilla_7'){
+				$("#frameHTML").prop("src", "./plantillas/koppee/index.html")
+			} else if(id == 'plantilla_8'){
+				$("#frameHTML").prop("src", "./plantillas/inance/index.html")
+			} else if(id == 'plantilla_9'){
+				$("#frameHTML").prop("src", "./plantillas/heustonn/index.html")
+			} else if(id == 'plantilla_10'){
+				$("#frameHTML").prop("src", "./plantillas/template/index.html")
+			}
+			// var img = document.getElementById(imga);
+			// var modalImg = document.getElementById("img01");
+				modal.style.display = "block";
+				// modalImg.src = img.src;
+				// captionText.innerHTML = img.alt;
+
+			var span = document.getElementsByClassName("close")[1];
+			var span2 = document.getElementsByClassName("modal")[1];
+			span2.onclick = function() { 
+				modal.style.display = "none";
+			}
+			span.onclick = function() { 
+				modal.style.display = "none";
+			}
 		}
 	</script>
