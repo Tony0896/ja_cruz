@@ -72,7 +72,152 @@
             width: 40px;
             background: #00214C;
         }
-        
+        .modal-content {
+			margin: auto;
+			display: block;
+			width: 80%;
+			max-width: 700px;
+		}
+
+		/* Caption of Modal Image */
+		#caption {
+			margin: auto;
+			display: block;
+			width: 80%;
+			max-width: 700px;
+			text-align: center;
+			color: #ccc;
+			padding: 10px 0;
+			height: 150px;
+		}
+
+		/* Add Animation */
+		.modal-content,
+		#caption {
+			-webkit-animation-name: zoom;
+			-webkit-animation-duration: 0.6s;
+			animation-name: zoom;
+			animation-duration: 0.6s;
+		}
+
+		@-webkit-keyframes zoom {
+			from {
+				-webkit-transform: scale(0)
+			}
+
+			to {
+				-webkit-transform: scale(1)
+			}
+		}
+
+		@keyframes zoom {
+			from {
+				transform: scale(0)
+			}
+
+			to {
+				transform: scale(1)
+			}
+		}
+
+		/* The Close Button */
+		.close {
+			position: absolute;
+			top: 15px;
+			right: 35px;
+			color: #f1f1f1;
+			font-size: 40px;
+			font-weight: bold;
+			transition: 0.3s;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: #bbb;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		/* 100% Image Width on Smaller Screens */
+		@media only screen and (max-width: 700px) {
+			.modal-content {
+				width: 100%;
+			}
+		}
+
+		.modal {
+			top: 25%;
+			display: none;
+			/* Hidden by default */
+			position: fixed;
+			/* Stay in place */
+			/* Sit on top */
+			/* padding-top: 100px; */
+			/* Location of the box */
+			left: 0;
+			top: 0;
+			width: 100%;
+			/* Full width */
+			/* height: 100%; */
+			/* Full height */
+			overflow: auto;
+			/* Enable scroll if needed */
+			background-color: rgb(0, 0, 0);
+			/* Fallback color */
+			background-color: rgba(0, 0, 0, 0.8);
+			/* Black w/ opacity */
+		}
+
+		.carousel-indicators li {
+			border: 1px solid #3498DB;
+		}
+
+		.carousel-indicators .active {
+			background-color: #3498DB;
+		}
+
+        .containerImage{
+            height: 90vh;
+            margin: 5vh auto;
+            display: flex;
+        }
+
+        img#img01 {
+            max-height: 90vh;
+            width: auto;
+        }
+
+        .ImageABD{
+            cursor: pointer;
+        }
+
+        button.nav-link{
+            background-color: #fff;
+            border: 0px;
+        }
+
+        button:focus{
+            outline: 0px;
+        }
+
+        .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+            color: #fff;
+            background-color: #3498DB;
+        }
+
+        .containerImages{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .boxImage{
+            /* border: 1px solid; */
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -164,7 +309,7 @@
                     <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Conferencias</h5>
                     <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Stands</h5>
                     <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Bodas</h5>
-                    <a href="#page_service" class="btn btn-primary font-weight-bold py-2 px-4 mt-2">Conoce más</a>
+                    <a href="#page_service" class="btn btn-primary font-weight-bold py-2 px-4 mt-2" style="color: #FFF;">Conoce más</a>
                 </div>
             </div>
         </div>
@@ -188,6 +333,9 @@
                         <div class="col-sm-7">
                             <h4><i class="fa fa-birthday-cake service-icon"></i>Fiestas (Bodas, XV años)</h4>
                             <p class="m-0">Servicios para tus fiestas.</p>
+                            <div>
+                                <button class="btn btn-primary btn-block font-weight-bold py-3" data-toggle="modal" data-target="#myModal" style="color: #FFF;">Conocer más</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -236,7 +384,7 @@
             <h1 class="display-3 text-primary mt-3">Mes de la oferta!!</h1>
             <h1 class="text-white mb-3">Conoce nuestras promociones</h1>
             <!-- <h4 class="text-white font-weight-normal mb-4 pb-3">Only for Sunday from 1st Jan to 30th Jan 2045</h4> -->
-            <a href="#page_contact" class="btn btn-secondary font-weight-bold py-2 px-4 mt-2">Contáctanos</a>
+            <a href="#page_contact" class="btn btn-primary font-weight-bold py-2 px-4 mt-2" style="color: #FFF;">Contáctanos</a>
             <!-- <form class="form-inline justify-content-center mb-4">
                 <div class="input-group">
                     <input type="text" class="form-control p-4" placeholder="Your Email" style="height: 60px;">
@@ -382,30 +530,30 @@
                 <div class="col-lg-12">
                     <h1 class="mb-5">Eventos Sociales</h1>
                     <div class="owl-carousel owl-theme">
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/1.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/2.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/3.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/4.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/5.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/6.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/7.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/8.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/9.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/10.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/11.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/12.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/13.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/14.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/15.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/16.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/17.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/18.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/19.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/20.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/21.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/22.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/23.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/eventos/24.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_1" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/1.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_2" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/2.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_3" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/3.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_4" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/4.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_5" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/5.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_6" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/6.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_7" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/7.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_8" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/8.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_9" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/9.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_10" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/10.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_11" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/11.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_12" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/12.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_13" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/13.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_14" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/14.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_15" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/15.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_16" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/16.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_17" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/17.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_18" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/18.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_19" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/19.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_20" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/20.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_21" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/21.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_22" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/22.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_23" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/23.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_24" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/eventos/24.jpeg"></div>
                     </div>
                 </div>
             </div>
@@ -414,13 +562,13 @@
                 <div class="col-lg-12">
                     <h1 class="mb-5">Conferencias y Entretenimiento</h1>
                     <div class="owl-carousel owl-theme">
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/conferencias y entretenimiento/1.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/conferencias y entretenimiento/2.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/conferencias y entretenimiento/3.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/conferencias y entretenimiento/4.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/conferencias y entretenimiento/5.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/conferencias y entretenimiento/6.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/conferencias y entretenimiento/7.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_25" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/conferencias y entretenimiento/1.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_26" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/conferencias y entretenimiento/2.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_27" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/conferencias y entretenimiento/3.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_28" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/conferencias y entretenimiento/4.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_29" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/conferencias y entretenimiento/5.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_30" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/conferencias y entretenimiento/6.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_31" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/conferencias y entretenimiento/7.jpeg"></div>
                     </div>
                 </div>
             </div>
@@ -429,32 +577,32 @@
                 <div class="col-lg-12">
                     <h1 class="mb-5">Stands</h1>
                     <div class="owl-carousel owl-theme">
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/1.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/2.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/3.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/4.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/5.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/6.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/7.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/8.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/9.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/10.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/11.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/12.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/13.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/14.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/15.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/16.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/17.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/18.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/19.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/20.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/21.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/22.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/23.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/24.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/25.jpeg"></div>
-                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img src="./img/gallery/stand/26.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_32" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/1.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_33" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/2.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_34" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/3.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_35" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/4.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_36" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/5.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_37" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/6.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_38" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/7.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_39" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/8.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_40" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/9.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_41" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/10.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_42" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/11.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_43" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/12.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_44" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/13.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_45" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/14.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_46" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/15.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_47" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/16.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_48" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/17.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_49" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/18.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_50" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/19.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_51" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/20.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_52" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/21.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_53" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/22.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_54" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/23.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_55" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/24.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_56" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/25.jpeg"></div>
+                        <div class="item" style="height: 500px;display: flex;justify-content: center;align-items: center;"><img id="img_57" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/stand/26.jpeg"></div>
                     </div>
                 </div>
             </div>
@@ -463,6 +611,54 @@
     </div>
     <!-- Gallery End -->
 
+    <div id="popUp" class="modal" style="z-index: 1051;">
+		<span class="close">&times;</span>
+        <div class="containerImage">
+            <img class="modal-content" id="img01">
+        </div>
+		<div id="caption"></div>
+	</div>
+
+    <!-- Modal-->
+    <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left" style="height: 100vh;">
+        <div role="document" class="modal-dialog modal-xl" style="height: 90vh;">
+            <div class="modal-content" style="width: 100%;height: 100%;overflow: auto;">
+                <div>
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="margin-bottom: 0px !important;">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="pills-home-tab" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">HOTEL GALERÍA PLAZA</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-profile-tab" data-toggle="pill" data-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">SALÓN BBC</button>
+                        </li>
+                    </ul>
+                    <hr style="margin-top: 0;">
+                </div>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active tabContainer" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <h4 class="text-primary text-uppercase" style="color: #00214C !important;text-align: center;">HOTEL GALERÍA PLAZA</h4>
+                        <div class="containerImages">
+                            <div class="boxImage" style="display: flex;justify-content: center;align-items: center;"><img id="img_58" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/BBC/img_58.jpeg" style="max-width: -webkit-fill-available;"></div>
+                            <div class="boxImage" style="display: flex;justify-content: center;align-items: center;"><img id="img_59" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/BBC/img_59.jpeg" style="max-width: -webkit-fill-available;"></div>
+                            <div class="boxImage" style="display: flex;justify-content: center;align-items: center;"><img id="img_60" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/BBC/img_60.jpeg" style="max-width: -webkit-fill-available;"></div>
+                            <div class="boxImage" style="display: flex;justify-content: center;align-items: center;"><img id="img_61" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/BBC/img_61.jpeg" style="max-width: -webkit-fill-available;"></div>
+                            <div class="boxImage" style="display: flex;justify-content: center;align-items: center;"><img id="img_62" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/BBC/img_62.jpeg" style="max-width: -webkit-fill-available;"></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade tabContainer" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <h4 class="text-primary text-uppercase" style="color: #00214C !important;text-align: center;">SALÓN BBC</h4>
+                        <div class="containerImages">
+                            <div class="boxImage" style="display: flex;justify-content: center;align-items: center;"><img id="img_63" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/BBC/img_63.jpeg" style="max-width: -webkit-fill-available;"></div>
+                            <div class="boxImage" style="display: flex;justify-content: center;align-items: center;"><img id="img_64" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/BBC/img_64.jpeg" style="max-width: -webkit-fill-available;"></div>
+                            <div class="boxImage" style="display: flex;justify-content: center;align-items: center;"><img id="img_65" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/BBC/img_65.jpeg" style="max-width: -webkit-fill-available;"></div>
+                            <div class="boxImage" style="display: flex;justify-content: center;align-items: center;"><img id="img_66" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/BBC/img_66.jpeg" style="max-width: -webkit-fill-available;"></div>
+                            <div class="boxImage" style="display: flex;justify-content: center;align-items: center;"><img id="img_67" onclick="Imgs(this.id)" class="ImageABD" src="./img/gallery/BBC/img_67.jpeg" style="max-width: -webkit-fill-available;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer Start -->
     <div class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
@@ -509,10 +705,31 @@
             loop:true,
             margin:10,
             dots:true,
-            autoplay:false,
-            autoplayTimeout:5000,
-            autoplayHoverPause:false
+            autoplay:true,
+            autoplayTimeout:3000,
+            autoplayHoverPause:false,
+            touchDrag  : false,
+            mouseDrag  : false
         })
+
+        function Imgs(imga) {
+			var modal = document.getElementById('popUp');
+			var img = document.getElementById(imga);
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			modal.style.display = "block";
+			modalImg.src = img.src;
+			captionText.innerHTML = img.alt;
+
+			var span = document.getElementsByClassName("close")[0];
+			var span2 = document.getElementsByClassName("modal")[0];
+			span2.onclick = function () {
+				modal.style.display = "none";
+			}
+			span.onclick = function () {
+				modal.style.display = "none";
+			}
+		}
     </script>
 </body>
 
