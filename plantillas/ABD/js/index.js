@@ -74,7 +74,7 @@ function traeDetallesServicio(val) {
         case 4:
             $("#modalContent0").html(
                 `<div style="padding: 20px;">
-                    <h4><i class="fa fa-audible service-icon"></i>Pista de LED</h4>
+                    <h4><i class="fa fa-running service-icon"></i>Pista de LED</h4>
                     <p class="m-0">Ofrecemos pistas de baile con tecnología LED que se iluminan con diferentes colores y patrones, añadiendo un toque único a la pista de baile.</p>
                     <hr style="margin-top: 0" />
                 </div>`
@@ -276,4 +276,9 @@ function traeDetallesServicio(val) {
         default:
             break;
     }
+}
+
+function salirSesion() {
+    localStorage.removeItem("AccesoUsuario");
+    window.location.href = "login.html";
 }
