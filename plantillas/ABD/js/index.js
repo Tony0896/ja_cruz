@@ -279,6 +279,185 @@ function traeDetallesServicio(val) {
 }
 
 function salirSesion() {
-    localStorage.removeItem("AccesoUsuario");
-    window.location.href = "login.html";
+    $.ajax({
+        method: "GET",
+        dataType: "json",
+        url: "views/login/cerrarSession.php",
+    })
+        .done(function (result) {
+            let login = result.success;
+
+            switch (login) {
+                case true:
+                    localStorage.removeItem("AccesoUsuario");
+                    window.location.href = "login.html";
+                    break;
+            }
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            console.log("destruirAccesoUsuarioView - Server: " + jqXHR.responseText + "\nEstatus: " + textStatus + "\nError: " + errorThrown);
+        });
 }
+
+function editInfo(ID) {
+    let html = "",
+        htmlFooter = "";
+    switch (ID) {
+        case 1: //* Texto 1 Home
+            $("#exampleModalLabel").html("Editar");
+            html = `<div class="mb-3">
+                <label for="nuevoTexto" class="form-label">Nuevo Título</label>
+                <input type="text" class="form-control obligatorio" id="nuevoTexto" name="Nuevo Texto" />
+            </div>
+            `;
+
+            htmlFooter = `<button type="button" class="btn btn-secondary" onclick="hideModal2('exampleModal')">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="guardarCambios(${ID})">Guardar Cambios</button>`;
+
+            break;
+
+        default:
+            console.log("Defaut");
+            break;
+    }
+
+    $("#modalBody").html(html);
+    $("#modalFooter").html(htmlFooter);
+    $("#exampleModal").modal("show");
+}
+
+function hideModal2(modal) {
+    $("#" + modal).modal("hide");
+}
+
+function guardarCambios(ID) {
+    let values = get_datos_completos("modalBody");
+    let response = values.response;
+    let valido = values.valido;
+    let dataSend = values.dataSend;
+    console.log(dataSend);
+    if (valido) {
+        preloader.show();
+
+        // $.ajax({
+        //     method: "POST",
+        //     dataType: "JSON",
+        //     url: "./views/avisos/guardarAviso.php",
+        //     data: { aviso, fechaInicio, fechaFin },
+        // })
+        //     .done(function (results) {
+        //         let success = results.success;
+        //         let result = results.result;
+        //         switch (success) {
+        //             case true:
+        //                 $("#modalTemplate").modal("hide");
+        //                 $("#btnClose").off("click");
+        //                 msj.show("Aviso", "Guardado correctamente", [{ text1: "OK" }]);
+        //                 obtenerAvisos($("#estatusAvisos").val());
+        //                 break;
+        //             case false:
+        //                 preloader.hide();
+        //                 msj.show("Aviso", "Algo salió mal", [{ text1: "OK" }]);
+        //                 break;
+        //         }
+        //     })
+        //     .fail(function (jqXHR, textStatus, errorThrown) {
+        //         preloader.hide();
+        //         msj.show("Aviso", "Algo salió mal", [{ text1: "OK" }]);
+        //         console.log("error: " + jqXHR.responseText + "\nEstatus: " + textStatus + "\nError: " + errorThrown);
+        //     });
+        preloader.hide(); //!Quitar
+    } else {
+        let html =
+            '<span style="font-weight: 900;">Debes llenar estos campos para poder guardar:</span> <br> <ul style="text-align: left; margin-left: 15px; font-style: italic;"> ';
+        response.forEach((data) => {
+            html += `<li style="list-style: disc;">${data}.</li> `;
+        });
+        html += `</ul>`;
+        Swal.fire({ icon: "warning", title: "", html: html });
+    }
+
+    switch (ID) {
+        case 1: //* Texto 1 Home
+            break;
+
+        default:
+            console.log("Defaut");
+            break;
+    }
+}
+
+function get_datos_completos(form) {
+    let campos;
+    let trae_los_campos_sin_llennar = [];
+    let dataSend = {};
+    campos = document.querySelectorAll("#" + form + " .obligatorio");
+    let valido = true;
+
+    [].slice.call(campos).forEach(function (campo) {
+        if ($(campo).get(0).tagName == "SELECT") {
+            if (campo.value.trim() == 0 || campo.value.trim() == "") {
+                valido = false;
+                trae_los_campos_sin_llennar = [...trae_los_campos_sin_llennar, $(campo).attr("name")];
+            } else {
+                let idcampo = $(campo).attr("id");
+                let value = campo.value.trim();
+                value = value.replaceAll("'", '"');
+                dataSend[idcampo] = value;
+            }
+        } else if ($(campo).get(0).tagName == "TEXTAREA") {
+            if (campo.value.trim() === "") {
+                valido = false;
+                trae_los_campos_sin_llennar = [...trae_los_campos_sin_llennar, $(campo).attr("name")];
+            } else {
+                let idcampo = $(campo).attr("id");
+                let value = campo.value.trim();
+                value = value.replaceAll("'", '"');
+                dataSend[idcampo] = value;
+            }
+        } else {
+            if (campo.value.trim() === "") {
+                valido = false;
+                trae_los_campos_sin_llennar = [...trae_los_campos_sin_llennar, $(campo).attr("name")];
+            } else {
+                let idcampo = $(campo).attr("id");
+                let value = campo.value.trim();
+                value = value.replaceAll("'", '"');
+                dataSend[idcampo] = value;
+            }
+        }
+    });
+
+    if (valido) {
+        return {
+            valido: valido,
+            reponse: 1,
+            dataSend,
+        };
+    } else {
+        return {
+            valido: valido,
+            response: trae_los_campos_sin_llennar,
+            dataSend,
+        };
+    }
+}
+
+const preloader = function () {};
+
+preloader.show = function () {
+    $(".modals").modal({ backdrop: "static", keyboard: false });
+    $(".modals").modal("show");
+    $(".modal").css("z-index", "1040");
+    $(".modals").css("z-index", "1056");
+    $(".modalAlerts").css("z-index", "1057");
+};
+
+preloader.hide = function () {
+    setTimeout(function () {
+        $(".modal").css("z-index", "1051");
+        $(".modals").modal("hide");
+        $(".modals").data("bs.modal", null);
+        $(".modalAlerts").css("z-index", "1057");
+    }, 1000);
+};

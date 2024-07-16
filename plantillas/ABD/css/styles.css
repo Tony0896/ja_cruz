@@ -1,0 +1,211 @@
+html {
+    scroll-behavior: smooth;
+}
+.reservation,
+.page-header,
+.offer,
+.footer {
+    background: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 73%)), url(./../img/bg.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.overlay-top::before {
+    bottom: -1px;
+    background: url(./../img/overlay-bottom.png);
+    transform: scale(-1);
+}
+.form-control {
+    color: #c9c9c9;
+}
+.owl-carousel .owl-stage {
+    display: flex;
+    align-items: center;
+}
+.owl-carousel .owl-dots {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.owl-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: #5dade2;
+    transition: 0.5s;
+}
+
+.owl-carousel .owl-dot.active {
+    width: 40px;
+    background: #00214c;
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0);
+    }
+
+    to {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+.modal {
+    top: 25%;
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    /* Sit on top */
+    /* padding-top: 100px; */
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    /* height: 100%; */
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Black w/ opacity */
+}
+
+.carousel-indicators li {
+    border: 1px solid #3498db;
+}
+
+.carousel-indicators .active {
+    background-color: #3498db;
+}
+
+.containerImage {
+    height: 90vh;
+    margin: 5vh auto;
+    display: flex;
+}
+
+img#img01 {
+    max-height: 90vh;
+    width: -webkit-fill-available;
+}
+
+.ImageABD {
+    cursor: pointer;
+}
+
+button.nav-link {
+    background-color: #fff;
+    border: 0px;
+}
+
+button:focus {
+    outline: 0px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #3498db;
+}
+
+.containerImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.boxImage {
+    /* border: 1px solid; */
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    cursor: pointer;
+}
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: none;
+}
+.btn:focus,
+.btn.focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    background: transparent !important;
+    border: none !important;
+    color: #00214c !important;
+}
+
+.btn {
+    border-radius: 8px;
+}

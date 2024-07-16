@@ -41,93 +41,76 @@ function validarCampos() {
 }
 
 function validarLogin(usuario, contrasena) {
-    // $.ajax({
-    //     method: "POST",
-    //     dataType: "json",
-    //     url: "views/login/validarLogin.php",
-    //     data: { usuario, contrasena },
-    // })
-    //     .done(function (result) {
-    //         let login = result.success;
-    //         let results = result.result;
-    //         let code = result.code;
-    //         switch (login) {
-    //             case true:
-    //                 if (code == 202) {
-    //                     Swal.fire({
-    //                         icon: "warning",
-    //                         title: "Aviso",
-    //                         text: results,
-    //                     });
-    //                 } else if (code == 200) {
-    //                     creaSession(usuario);
-    //                 } else {
-    //                     Swal.fire({
-    //                         icon: "warning",
-    //                         title: "Aviso",
-    //                         text: "Algo salió mal.",
-    //                     });
-    //                 }
-    //                 break;
-    //             case false:
-    //                 Swal.fire({
-    //                     icon: "warning",
-    //                     title: "Aviso",
-    //                     text: "Algo salió mal.",
-    //                 });
-    //                 break;
-    //         }
-    //     })
-    //     .fail(function (jqXHR, textStatus, errorThrown) {
-    //         console.log("accesoUsuarioView  - Server: " + jqXHR.responseText + "\nEstatus: " + textStatus + "\nError: " + errorThrown);
-    //     });
-    if (usuario == "test") {
-        if (contrasena == "test1234") {
-            creaSession(usuario);
-        } else {
-            Swal.fire({
-                icon: "warning",
-                title: "Aviso",
-                text: "Contraseña incorrecta",
-            });
-        }
-    } else {
-        Swal.fire({
-            icon: "warning",
-            title: "Aviso",
-            text: "Usuario no registrado",
+    $.ajax({
+        method: "POST",
+        dataType: "json",
+        url: "views/login/validarLogin.php",
+        data: { usuario, contrasena },
+    })
+        .done(function (result) {
+            let login = result.success;
+            let results = result.result;
+            let code = result.code;
+            switch (login) {
+                case true:
+                    if (code == 202) {
+                        Swal.fire({
+                            icon: "warning",
+                            title: "Aviso",
+                            text: results,
+                        });
+                    } else if (code == 200) {
+                        creaSession(usuario);
+                    } else {
+                        Swal.fire({
+                            icon: "warning",
+                            title: "Aviso",
+                            text: "Algo salió mal.",
+                        });
+                    }
+                    break;
+                case false:
+                    Swal.fire({
+                        icon: "warning",
+                        title: "Aviso",
+                        text: "Algo salió mal.",
+                    });
+                    break;
+            }
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            console.log("accesoUsuarioView  - Server: " + jqXHR.responseText + "\nEstatus: " + textStatus + "\nError: " + errorThrown);
         });
-    }
 }
 
 function creaSession(usuario) {
-    // $.ajax({
-    //     method: "POST",
-    //     dataType: "json",
-    //     url: "views/login/creaSession.php",
-    //     data: { usuario },
-    // })
-    //     .done(function (result) {
-    //         let login = result.success;
-    //         switch (login) {
-    //             case true:
-    localStorage.setItem("AccesoUsuario", 1);
-    window.location.href = "index.html";
+    $.ajax({
+        method: "POST",
+        dataType: "json",
+        url: "views/login/creaSession.php",
+        data: { usuario },
+    })
+        .done(function (result) {
+            let login = result.success;
+            switch (login) {
+                case true:
+                    localStorage.setItem("AccesoUsuario", 1);
+                    window.location.href = "index.html";
 
-    //                 break;
-    //             case false:
-    //                 Swal.fire({
-    //                     icon: "warning",
-    //                     title: "Aviso",
-    //                     text: "Algo salió mal.",
-    //                 });
+                    break;
+                case false:
+                    Swal.fire({
+                        icon: "warning",
+                        title: "Aviso",
+                        text: "Algo salió mal.",
+                    });
 
-    //                 break;
-    //         }
-    //     })
-    //     .fail(function (jqXHR, textStatus, errorThrown) {
-    //         console.log("accesoUsuarioView  - Server: " + jqXHR.responseText + "\nEstatus: " + textStatus + "\nError: " + errorThrown);
-    //     });
+                    break;
+            }
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            console.log("accesoUsuarioView  - Server: " + jqXHR.responseText + "\nEstatus: " + textStatus + "\nError: " + errorThrown);
+        });
 }
 
 function irIndex() {
