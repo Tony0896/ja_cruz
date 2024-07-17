@@ -25,6 +25,7 @@
         <link href="css/style.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/spiner.css" />
+        <link href="./css/CDN/sweetalert2.min.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -53,7 +54,7 @@
 
         <div class="modal modals fade bd-example-modal-lg" data-backdrop="static" data-keyboard="false" tabindex="-1" style="height: 100%">
             <div class="modal-dialog modal-sm" style="margin: auto; height: 100%; align-content: center">
-                <div class="modal-content" style="width: 48px;background-color: transparent;">
+                <div class="modal-content" style="width: 48px; background-color: transparent">
                     <div class="spinner"></div>
                 </div>
             </div>
@@ -67,15 +68,25 @@
                         <img class="w-100" src="img/carousel-1.jpg" alt="Image" />
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <h2 class="text-primary font-weight-medium m-0">
-                                Tu mejor opción
-                                <button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(1)">
+                                <text id="text_1"></text>
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-warning btn_editInfo"
+                                    style="margin-left: 20px; display: none"
+                                    onclick="editInfo(1)"
+                                >
                                     <i class="fas fa-edit"></i>
                                 </button>
                             </h2>
                             <h1 class="display-1 text-white m-0">LUVIA</h1>
                             <h2 class="text-white m-0">
-                                * Desde 2010 *
-                                <button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(2)">
+                                <text id="text_2"></text>
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-warning btn_editInfo"
+                                    style="margin-left: 20px; display: none"
+                                    onclick="editInfo(3)"
+                                >
                                     <i class="fas fa-edit"></i>
                                 </button>
                             </h2>
@@ -85,15 +96,25 @@
                         <img class="w-100" src="img/carousel-2.jpg" alt="Image" />
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <h2 class="text-primary font-weight-medium m-0">
-                                Calidad en el servicio
-                                <button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(3)">
+                                <text id="text_3"></text>
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-warning btn_editInfo"
+                                    style="margin-left: 20px; display: none"
+                                    onclick="editInfo(2)"
+                                >
                                     <i class="fas fa-edit"></i>
                                 </button>
                             </h2>
                             <h1 class="display-1 text-white m-0">LUVIA</h1>
                             <h2 class="text-white m-0">
-                                * Desde 2010 *
-                                <button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(2)">
+                                <text id="text_4"></text>
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-warning btn_editInfo"
+                                    style="margin-left: 20px; display: none"
+                                    onclick="editInfo(3)"
+                                >
                                     <i class="fas fa-edit"></i>
                                 </button>
                             </h2>
@@ -121,9 +142,13 @@
                     <div class="col-lg-4 py-0 py-lg-5">
                         <h1 class="mb-3">Misión:</h1>
                         <h5 class="mb-3">
-                            En LUVIA ofrecemos eventos de calidad brindando a nuestros clientes un servicio profesional. Desde la iluminación, audio,
-                            y video. Con equipo profesional y de la mayor calidad para ambientar cualquier tipo de evento.
-                            <button type="button" class="btn btn-outline-danger btn_editInfo" onclick="editInfo(4)">
+                            <text id="text_5"> </text>
+                            <button
+                                type="button"
+                                class="btn btn-outline-danger btn_editInfo"
+                                style="margin-left: 20px; display: none"
+                                onclick="editInfo(4)"
+                            >
                                 <i class="fas fa-edit"></i>
                             </button>
                         </h5>
@@ -136,9 +161,13 @@
                     <div class="col-lg-4 py-0 py-lg-5">
                         <h1 class="mb-3">Servicios.</h1>
                         <p>
-                            Contamos con un enorme catálogo de productos y servicios que a lo largo de nuestra carrrera nos han llevado a conocer las
-                            necesidades de nuestros clientes contamos con:
-                            <button type="button" class="btn btn-outline-danger btn_editInfo" onclick="editInfo(5)">
+                            <text id="text_6"> </text>
+                            <button
+                                type="button"
+                                class="btn btn-outline-danger btn_editInfo"
+                                style="margin-left: 20px; display: none"
+                                onclick="editInfo(5)"
+                            >
                                 <i class="fas fa-edit"></i>
                             </button>
                         </p>
@@ -153,7 +182,14 @@
                         <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Servicios de consultoría</h5>
 
                         <a href="#page_service" class="btn btn-primary font-weight-bold py-2 px-4 mt-2" style="color: #fff">Conoce más</a>
-                        <button type="button" class="btn btn-outline-danger btn_editInfo" onclick="editInfo(7)"><i class="fas fa-edit"></i></button>
+                        <button
+                            type="button"
+                            class="btn btn-outline-danger btn_editInfo"
+                            onclick="editInfo()"
+                            style="margin-left: 20px; display: none"
+                        >
+                            <i class="fas fa-edit"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -166,7 +202,9 @@
                 <div class="section-title">
                     <h4 class="text-primary text-uppercase" style="letter-spacing: 5px">Nuestros Servicios</h4>
                     <h1 class="display-4">Servicios de Calidad y Profesionales.</h1>
-                    <button type="button" class="btn btn-outline-danger btn_editInfo" onclick="editInfo(8)"><i class="fas fa-edit"></i></button>
+                    <button type="button" class="btn btn-outline-danger btn_editInfo" onclick="editInfo()" style="display: none">
+                        <i class="fas fa-edit"></i>
+                    </button>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 mb-5">
@@ -409,23 +447,30 @@
                         <div class="p-5">
                             <div class="mb-4">
                                 <h1 class="display-3 text-primary">
-                                    30% OFF
-                                    <button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(9)">
+                                    <text id="text_7"></text>
+                                    <button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(6)" style="display: none">
                                         <i class="fas fa-edit"></i>
                                     </button>
                                 </h1>
                                 <h1 class="text-white">
-                                    Oferta solo disponible Online
-                                    <button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(10)">
+                                    <text id="text_9"> </text>
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-warning btn_editInfo"
+                                        onclick="editInfo(7)"
+                                        style="margin-left: 20px; display: none"
+                                    >
                                         <i class="fas fa-edit"></i>
                                     </button>
                                 </h1>
                             </div>
                             <p class="text-white">
-                                Mandanos tus datos para recibir un descuento especial, en tu próxima reservación. Aplicable para.<button
+                                <text id="text_8"> </text>
+                                <button
                                     type="button"
                                     class="btn btn-outline-warning btn_editInfo"
-                                    onclick="editInfo(11)"
+                                    onclick="editInfo(8)"
+                                    style="margin-left: 20px; display: none"
                                 >
                                     <i class="fas fa-edit"></i>
                                 </button>
@@ -434,7 +479,7 @@
                                 <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Cotiza ahora</li>
                                 <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Precios accesibles.</li>
                                 <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Presupuesto gratis.</li>
-                                <button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(12)">
+                                <button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(12)" style="display: none">
                                     <i class="fas fa-edit"></i>
                                 </button>
                             </ul>
@@ -496,7 +541,9 @@
                     <h4 class="text-primary text-uppercase" style="letter-spacing: 5px">Testimoniales</h4>
                     <h1 class="display-4">
                         Nuestros clientes dicen:
-                        <button type="button" class="btn btn-outline-danger btn_editInfo" onclick="editInfo(13)"><i class="fas fa-edit"></i></button>
+                        <button type="button" class="btn btn-outline-danger btn_editInfo" onclick="editInfo(13)" style="display: none">
+                            <i class="fas fa-edit"></i>
+                        </button>
                     </h1>
                 </div>
                 <div class="owl-carousel testimonial-carousel">
@@ -552,7 +599,9 @@
                     <h4 class="text-primary text-uppercase" style="letter-spacing: 5px">Galería</h4>
                     <h1 class="display-4">
                         Conoce algunos de nuestros proyectos en:
-                        <button type="button" class="btn btn-outline-danger btn_editInfo" onclick="editInfo(14)"><i class="fas fa-edit"></i></button>
+                        <button type="button" class="btn btn-outline-danger btn_editInfo" onclick="editInfo(14)" style="display: none">
+                            <i class="fas fa-edit"></i>
+                        </button>
                     </h1>
                 </div>
 
@@ -790,22 +839,45 @@
             <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
                 <div class="col-lg-3 col-md-6 mb-5">
                     <p>
-                        <i class="fa fa-map-marker-alt mr-2"></i>Naucalpan de Juárez, Estado de México.
-                        <button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(15)"><i class="fas fa-edit"></i></button>
+                        <i class="fa fa-map-marker-alt mr-2"></i><text id="text_10"> </text>
+                        <button
+                            type="button"
+                            class="btn btn-outline-warning btn_editInfo"
+                            onclick="editInfo(9)"
+                            style="margin-left: 20px; display: none"
+                        >
+                            <i class="fas fa-edit"></i>
+                        </button>
                     </p>
                     <p>
-                        <i class="fa fa-phone-alt mr-2"></i>+012 345 67890
-                        <button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(16)"><i class="fas fa-edit"></i></button>
+                        <i class="fa fa-phone-alt mr-2"></i>+<text id="text_11"> </text>
+                        <button
+                            type="button"
+                            class="btn btn-outline-warning btn_editInfo"
+                            onclick="editInfo(10)"
+                            style="margin-left: 20px; display: none"
+                        >
+                            <i class="fas fa-edit"></i>
+                        </button>
                     </p>
                     <p class="m-0">
-                        <i class="fa fa-envelope mr-2"></i>info@example.com
-                        <button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(17)"><i class="fas fa-edit"></i></button>
+                        <i class="fa fa-envelope mr-2"></i><text id="text_12"> </text>
+                        <button
+                            type="button"
+                            class="btn btn-outline-warning btn_editInfo"
+                            onclick="editInfo(11)"
+                            style="margin-left: 20px; display: none"
+                        >
+                            <i class="fas fa-edit"></i>
+                        </button>
                     </p>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-5">
                     <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px">
                         Síguenos
-                        <button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(18)"><i class="fas fa-edit"></i></button>
+                        <button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(18)" style="display: none">
+                            <i class="fas fa-edit"></i>
+                        </button>
                     </h4>
                     <div class="d-flex justify-content-start">
                         <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
@@ -848,7 +920,7 @@
         <script src="./lib/tempusdominus/js/moment.min.js"></script>
         <script src="./lib/tempusdominus/js/moment-timezone.min.js"></script>
         <script src="./lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
+        <script src="./libraries/sweetalert2.all.min.js"></script>
         <!-- Template Javascript -->
         <script src="./js/main.js"></script>
         <script src="./js/index.js"></script>

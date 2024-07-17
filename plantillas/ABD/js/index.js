@@ -300,30 +300,38 @@ function salirSesion() {
 }
 
 function editInfo(ID) {
-    let html = "",
-        htmlFooter = "";
-    switch (ID) {
-        case 1: //* Texto 1 Home
-            $("#exampleModalLabel").html("Editar");
-            html = `<div class="mb-3">
+    if (localStorage.getItem("AccesoUsuario")) {
+        let html = "",
+            htmlFooter = "";
+        switch (ID) {
+            case 1: //* Texto 1 Home
+            case 2:
+            case 3:
+            case 4:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+                $("#exampleModalLabel").html("Editar");
+                html = `<div class="mb-3">
                 <label for="nuevoTexto" class="form-label">Nuevo Título</label>
-                <input type="text" class="form-control obligatorio" id="nuevoTexto" name="Nuevo Texto" />
-            </div>
-            `;
-
-            htmlFooter = `<button type="button" class="btn btn-secondary" onclick="hideModal2('exampleModal')">Cerrar</button>
+                <input type="text" class="form-control obligatorio" id="nuevoTexto" name="Nuevo Texto" autocomplete="off"/>
+            </div>`;
+                htmlFooter = `<button type="button" class="btn btn-secondary" onclick="hideModal2('exampleModal')">Cerrar</button>
                 <button type="button" class="btn btn-primary" onclick="guardarCambios(${ID})">Guardar Cambios</button>`;
+                break;
 
-            break;
+            default:
+                console.log("Defaut");
+                break;
+        }
 
-        default:
-            console.log("Defaut");
-            break;
+        $("#modalBody").html(html);
+        $("#modalFooter").html(htmlFooter);
+        $("#exampleModal").modal("show");
     }
-
-    $("#modalBody").html(html);
-    $("#modalFooter").html(htmlFooter);
-    $("#exampleModal").modal("show");
 }
 
 function hideModal2(modal) {
@@ -335,37 +343,38 @@ function guardarCambios(ID) {
     let response = values.response;
     let valido = values.valido;
     let dataSend = values.dataSend;
+    dataSend["ID"] = ID;
     console.log(dataSend);
     if (valido) {
         preloader.show();
 
-        // $.ajax({
-        //     method: "POST",
-        //     dataType: "JSON",
-        //     url: "./views/avisos/guardarAviso.php",
-        //     data: { aviso, fechaInicio, fechaFin },
-        // })
-        //     .done(function (results) {
-        //         let success = results.success;
-        //         let result = results.result;
-        //         switch (success) {
-        //             case true:
-        //                 $("#modalTemplate").modal("hide");
-        //                 $("#btnClose").off("click");
-        //                 msj.show("Aviso", "Guardado correctamente", [{ text1: "OK" }]);
-        //                 obtenerAvisos($("#estatusAvisos").val());
-        //                 break;
-        //             case false:
-        //                 preloader.hide();
-        //                 msj.show("Aviso", "Algo salió mal", [{ text1: "OK" }]);
-        //                 break;
-        //         }
-        //     })
-        //     .fail(function (jqXHR, textStatus, errorThrown) {
-        //         preloader.hide();
-        //         msj.show("Aviso", "Algo salió mal", [{ text1: "OK" }]);
-        //         console.log("error: " + jqXHR.responseText + "\nEstatus: " + textStatus + "\nError: " + errorThrown);
-        //     });
+        $.ajax({
+            method: "POST",
+            dataType: "JSON",
+            url: "./views/edita/guardaCambios.php",
+            data: { dataSend },
+        })
+            .done(function (results) {
+                let success = results.success;
+                let result = results.result;
+                switch (success) {
+                    case true:
+                        Swal.fire({ icon: "success", title: "", text: "Guardado correctamente." });
+                        hideModal2("exampleModal");
+                        traerElemtos();
+
+                        break;
+                    case false:
+                        preloader.hide();
+                        Swal.fire({ icon: "warning", title: "", text: "Algo salio mal vuelve a intentarlo." });
+                        break;
+                }
+            })
+            .fail(function (jqXHR, textStatus, errorThrown) {
+                preloader.hide();
+                Swal.fire({ icon: "warning", title: "", text: "Algo salio mal vuelve a intentarlo." });
+                console.log("error: " + jqXHR.responseText + "\nEstatus: " + textStatus + "\nError: " + errorThrown);
+            });
         preloader.hide(); //!Quitar
     } else {
         let html =
@@ -375,15 +384,6 @@ function guardarCambios(ID) {
         });
         html += `</ul>`;
         Swal.fire({ icon: "warning", title: "", html: html });
-    }
-
-    switch (ID) {
-        case 1: //* Texto 1 Home
-            break;
-
-        default:
-            console.log("Defaut");
-            break;
     }
 }
 
@@ -461,3 +461,88 @@ preloader.hide = function () {
         $(".modalAlerts").css("z-index", "1057");
     }, 1000);
 };
+
+function traerElemtos() {
+    preloader.show();
+    $.ajax({
+        method: "POST",
+        dataType: "JSON",
+        url: "./views/edita/traerElemtos.php",
+        data: {},
+    })
+        .done(function (results) {
+            let success = results.success;
+            let result = results.result;
+            switch (success) {
+                case true:
+                    if (result == "Sin Datos") {
+                        preloader.hide();
+                    } else {
+                        result.forEach((data, index) => {
+                            let dataID = data.ID;
+                            switch (dataID) {
+                                case "1":
+                                    $("#text_1").html(data.texto);
+                                    break;
+
+                                case "2":
+                                    $("#text_3").html(data.texto);
+                                    break;
+
+                                case "3":
+                                    $("#text_2").html(data.texto);
+                                    $("#text_4").html(data.texto);
+                                    break;
+
+                                case "4":
+                                    $("#text_5").html(data.texto);
+                                    break;
+
+                                case "5":
+                                    $("#text_6").html(data.texto);
+                                    break;
+
+                                case "6":
+                                    $("#text_7").html(data.texto);
+                                    break;
+
+                                case "7":
+                                    $("#text_9").html(data.texto);
+                                    break;
+
+                                case "8":
+                                    $("#text_8").html(data.texto);
+                                    break;
+
+                                case "9":
+                                    $("#text_10").html(data.texto);
+                                    break;
+
+                                case "10":
+                                    $("#text_11").html(data.texto);
+                                    break;
+
+                                case "11":
+                                    $("#text_12").html(data.texto);
+                                    break;
+
+                                default:
+                                    console.log("ID =>", data.ID, "texto =>", data.texto);
+                                    break;
+                            }
+                        });
+                        preloader.hide();
+                    }
+                    break;
+                case false:
+                    preloader.hide();
+                    Swal.fire({ icon: "warning", title: "", text: "Algo salio mal vuelve a intentarlo." });
+                    break;
+            }
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            preloader.hide();
+            Swal.fire({ icon: "warning", title: "", text: "Algo salio mal vuelve a intentarlo." });
+            console.log("error: " + jqXHR.responseText + "\nEstatus: " + textStatus + "\nError: " + errorThrown);
+        });
+}
