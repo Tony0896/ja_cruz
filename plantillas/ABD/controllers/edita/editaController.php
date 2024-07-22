@@ -24,5 +24,59 @@
             return $result_model;
         }
         
+        function traeRedesSociales(){
+            $model_edita = $this->getConexionModelClass();
+            $result_model = $model_edita->traeRedesSociales();
+            return $result_model;
+        }
+
+        function cambiaVisibleRed($data){
+            $model_edita = $this->getConexionModelClass();
+            $result_model = $model_edita->cambiaVisibleRed($data);
+            return $result_model;
+        }
+        
+        function cambiaURLRed($data){
+            $model_edita = $this->getConexionModelClass();
+            $result_model = $model_edita->cambiaURLRed($data);
+            return $result_model;
+        }
+
+        function traePromos(){
+            $model_edita = $this->getConexionModelClass();
+            $result_model = $model_edita->traePromos();
+            return $result_model;
+        }
+
+        function guardaPromo($data){
+            $model_edita = $this->getConexionModelClass();
+            $result_model = $model_edita->guardaPromo($data);
+            return $result_model;
+        }
+        
+        function eliminaPromo($data){
+            $model_edita = $this->getConexionModelClass();
+            $result_model = $model_edita->eliminaPromo($data);
+            return $result_model;
+        }
+
+        function traeTestimonios(){
+            $model_edita = $this->getConexionModelClass();
+            $result_model = $model_edita->traeTestimonios();
+            return $result_model;
+        }
+
+        function guardaTestimonios($data){
+            $model_edita = $this->getConexionModelClass();
+            $result_model = $model_edita->guardaTestimonios($data);
+            return $result_model;
+        }
+
+        function eliminaTestimonio($data){
+            $model_edita = $this->getConexionModelClass();
+            $result_model = $model_edita->eliminaTestimonio($data);
+            return $result_model;
+        }
+        
     }
 ?>

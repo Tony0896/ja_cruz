@@ -26,6 +26,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="css/spiner.css" />
         <link href="./css/CDN/sweetalert2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./libraries/dropzone/unpkg.com_dropzone@5.9.3_dist_min_dropzone.min.css" type="text/css" />
     </head>
 
     <body>
@@ -185,7 +186,7 @@
                         <button
                             type="button"
                             class="btn btn-outline-danger btn_editInfo"
-                            onclick="editInfo()"
+                            onclick="editInfo(12)"
                             style="margin-left: 20px; display: none"
                         >
                             <i class="fas fa-edit"></i>
@@ -202,7 +203,7 @@
                 <div class="section-title">
                     <h4 class="text-primary text-uppercase" style="letter-spacing: 5px">Nuestros Servicios</h4>
                     <h1 class="display-4">Servicios de Calidad y Profesionales.</h1>
-                    <button type="button" class="btn btn-outline-danger btn_editInfo" onclick="editInfo()" style="display: none">
+                    <button type="button" class="btn btn-outline-danger btn_editInfo" onclick="editInfo(13)" style="display: none">
                         <i class="fas fa-edit"></i>
                     </button>
                 </div>
@@ -475,14 +476,7 @@
                                     <i class="fas fa-edit"></i>
                                 </button>
                             </p>
-                            <ul class="list-inline text-white m-0">
-                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Cotiza ahora</li>
-                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Precios accesibles.</li>
-                                <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Presupuesto gratis.</li>
-                                <button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(12)" style="display: none">
-                                    <i class="fas fa-edit"></i>
-                                </button>
-                            </ul>
+                            <ul class="list-inline text-white m-0" id="div_list"></ul>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -541,53 +535,12 @@
                     <h4 class="text-primary text-uppercase" style="letter-spacing: 5px">Testimoniales</h4>
                     <h1 class="display-4">
                         Nuestros clientes dicen:
-                        <button type="button" class="btn btn-outline-danger btn_editInfo" onclick="editInfo(13)" style="display: none">
+                        <button type="button" class="btn btn-outline-danger btn_editInfo" onclick="editInfo(14)" style="display: none">
                             <i class="fas fa-edit"></i>
                         </button>
                     </h1>
                 </div>
-                <div class="owl-carousel testimonial-carousel">
-                    <div class="testimonial-item">
-                        <div class="d-flex align-items-center mb-3">
-                            <img class="img-fluid" src="img/testimonial-2.jpg" alt="" />
-                            <div class="ml-3">
-                                <h4>Cliente 2</h4>
-                                <i>Profession</i>
-                            </div>
-                        </div>
-                        <p class="m-0">Bla bla blablba bla bla bla bla Bla bla blablba bla bla bla bla Bla bla blablba bla bla bla bla</p>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="d-flex align-items-center mb-3">
-                            <img class="img-fluid" src="img/testimonial-3.jpg" alt="" />
-                            <div class="ml-3">
-                                <h4>Cliente 3</h4>
-                                <i>Profession</i>
-                            </div>
-                        </div>
-                        <p class="m-0">Bla bla blablba bla bla bla bla Bla bla blablba bla bla bla bla Bla bla blablba bla bla bla bla</p>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="d-flex align-items-center mb-3">
-                            <img class="img-fluid" src="img/testimonial-4.jpg" alt="" />
-                            <div class="ml-3">
-                                <h4>Cliente 4</h4>
-                                <i>Profession</i>
-                            </div>
-                        </div>
-                        <p class="m-0">Bla bla blablba bla bla bla bla Bla bla blablba bla bla bla bla Bla bla blablba bla bla bla bla</p>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="d-flex align-items-center mb-3">
-                            <img class="img-fluid" src="img/testimonial-1.jpg" alt="" />
-                            <div class="ml-3">
-                                <h4>Cliente 1</h4>
-                                <i>Profession</i>
-                            </div>
-                        </div>
-                        <p class="m-0">Bla bla blablba bla bla bla bla Bla bla blablba bla bla bla bla Bla bla blablba bla bla bla bla</p>
-                    </div>
-                </div>
+                <div id="div_testimonios"></div>
             </div>
         </div>
         <!-- Testimonial End -->
@@ -599,7 +552,7 @@
                     <h4 class="text-primary text-uppercase" style="letter-spacing: 5px">Galería</h4>
                     <h1 class="display-4">
                         Conoce algunos de nuestros proyectos en:
-                        <button type="button" class="btn btn-outline-danger btn_editInfo" onclick="editInfo(14)" style="display: none">
+                        <button type="button" class="btn btn-outline-danger btn_editInfo" onclick="editInfo(15)" style="display: none">
                             <i class="fas fa-edit"></i>
                         </button>
                     </h1>
@@ -834,6 +787,19 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal fade" id="modalTemplate" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true" style="height: 100%">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel1" style="font-size: 22px">Modal title</h1>
+                        <span class="close" id="btnClose" style="z-index: 1052; color: #ff0037">&times;</span>
+                    </div>
+                    <div class="modal-body" id="modalBody1"></div>
+                    <div class="modal-footer" id="modalFooter1"></div>
+                </div>
+            </div>
+        </div>
         <!-- Footer Start -->
         <div class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
             <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
@@ -875,16 +841,11 @@
                 <div class="col-lg-3 col-md-6 mb-5">
                     <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px">
                         Síguenos
-                        <button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(18)" style="display: none">
+                        <button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(16)" style="display: none">
                             <i class="fas fa-edit"></i>
                         </button>
                     </h4>
-                    <div class="d-flex justify-content-start">
-                        <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
+                    <div class="d-flex justify-content-start" id="divRedesSociales"></div>
                 </div>
                 <div
                     class="col-lg-6 col-md-6 mb-5"
@@ -921,6 +882,7 @@
         <script src="./lib/tempusdominus/js/moment-timezone.min.js"></script>
         <script src="./lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
         <script src="./libraries/sweetalert2.all.min.js"></script>
+        <script type="text/javascript" src="./libraries/dropzone/unpkg.com_dropzone@5.9.3_dist_min_dropzone.min.js"></script>
         <!-- Template Javascript -->
         <script src="./js/main.js"></script>
         <script src="./js/index.js"></script>

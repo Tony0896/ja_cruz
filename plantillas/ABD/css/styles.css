@@ -16,7 +16,7 @@ html {
     transform: scale(-1);
 }
 .form-control {
-    color: #c9c9c9;
+    border-radius: 8px;
 }
 .owl-carousel .owl-stage {
     display: flex;
@@ -208,4 +208,76 @@ button:focus {
 
 .btn {
     border-radius: 8px;
+}
+
+.carousel-indicators li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    text-indent: -999px;
+    cursor: pointer;
+    background-clip: padding-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    transition: 0.5s;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #555;
+    -webkit-tap-highlight-color: transparent;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: #5dade2;
+    transition: 0.5s;
+}
+
+.carousel-indicators .active {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    text-indent: -999px;
+    cursor: pointer;
+    background-clip: padding-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    transition: 0.5s;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    height: 20px;
+    border-radius: 20px;
+    transition: 0.5s;
+    width: 40px;
+    background: #00214c;
+}
+
+.dropzone {
+    min-height: 150px;
+    border: 2px dashed rgb(255 1 1 / 49%) !important;
+    background: #fff;
+    padding: 20px 20px;
+    border-radius: 10px;
 }
