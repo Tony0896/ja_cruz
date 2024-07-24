@@ -4,6 +4,7 @@
     // Dropdown on mouse hover
     $(document).ready(function () {
         traerElemtos();
+        traerServiciosActivos();
         if (localStorage.getItem("AccesoUsuario")) {
             $("#id_session_2").css("display", "flex");
             $(".btn_editInfo").css("display", "inline-block");

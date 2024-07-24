@@ -153,8 +153,10 @@ html {
 }
 
 img#img01 {
+    object-fit: contain;
     max-height: 90vh;
     width: -webkit-fill-available;
+    background: transparent;
 }
 
 .ImageABD {

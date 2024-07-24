@@ -36,6 +36,7 @@
 table {
     width: 100%;
     border-collapse: collapse;
+    overflow: auto;
 }
 
 thead {
@@ -154,11 +155,14 @@ td {
     opacity: 1;
 }
 
-.img-fluid {
-    max-width: 71px;
-    height: auto;
-}
-
 .imgtb {
     max-width: 50px;
+}
+
+.img100px {
+    max-width: 100px;
+}
+
+.img200px {
+    max-width: 205px;
 }
