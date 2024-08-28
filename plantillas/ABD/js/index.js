@@ -10,23 +10,42 @@
 //     mouseDrag: false,
 // });
 
-function Imgs(imga) {
-    var modal = document.getElementById("popUp");
-    var img = document.getElementById(imga);
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-    modal.style.display = "block";
-    modalImg.src = img.src;
-    captionText.innerHTML = img.alt;
+function Imgs(imga, video) {
+    if (video) {
+        let modal = document.getElementById("popUp1");
+        let img = document.getElementById(imga);
+        let modalImg = document.getElementById("img011");
+        let captionText = document.getElementById("caption1");
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
 
-    var span = document.getElementsByClassName("close")[0];
-    var span2 = document.getElementsByClassName("modal")[0];
-    span2.onclick = function () {
-        modal.style.display = "none";
-    };
-    span.onclick = function () {
-        modal.style.display = "none";
-    };
+        let span = document.getElementsByClassName("close")[1];
+        let span2 = document.getElementsByClassName("modal")[1];
+        span2.onclick = function () {
+            modal.style.display = "none";
+        };
+        span.onclick = function () {
+            modal.style.display = "none";
+        };
+    } else {
+        let modal = document.getElementById("popUp");
+        let img = document.getElementById(imga);
+        let modalImg = document.getElementById("img01");
+        let captionText = document.getElementById("caption");
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+
+        let span = document.getElementsByClassName("close")[0];
+        let span2 = document.getElementsByClassName("modal")[0];
+        span2.onclick = function () {
+            modal.style.display = "none";
+        };
+        span.onclick = function () {
+            modal.style.display = "none";
+        };
+    }
 }
 
 function hideModal(modal) {
@@ -597,6 +616,8 @@ function guardaPromo() {
                 let result = results.result;
                 switch (success) {
                     case true:
+                        $("#divNuevaPromo").css("display", "none");
+                        $("#input_promo").val("");
                         traePromos();
                         Swal.fire({ icon: "success", title: "", text: "Guardado correctamente." });
                         preloader.hide();
@@ -678,11 +699,13 @@ function traePromos() {
                     if (result == "Sin Datos") {
                         preloader.hide();
                     } else {
-                        let html = "";
+                        let html = "",
+                            display = "";
                         result.forEach((data, index) => {
                             html += `<li class="py-2"><i class="fa fa-check text-primary mr-3"></i>${data.promo}</li>`;
                         });
-                        html += `<button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(17)" style="display: none"><i class="fas fa-edit"></i></button>`;
+                        localStorage.getItem("AccesoUsuario") ? (display = "") : (display = 'style="display: none"');
+                        html += `<button type="button" class="btn btn-outline-warning btn_editInfo" onclick="editInfo(17)" ${display}><i class="fas fa-edit"></i></button>`;
                         $("#div_list").html(html);
                         preloader.hide();
                     }
@@ -992,7 +1015,9 @@ function editaTestimonios() {
                                 contentType: false,
                                 processData: false,
                             }).done(function (results) {
-                                if (results == "200") {
+                                let reresult = String(results).replace(/(\r\n|\n|\r)/gm, "");
+                                console.log(reresult);
+                                if (reresult == "200") {
                                     preloader.hide();
                                     limpiaDrop();
                                     $("#nameTestimonio").val("");
@@ -1250,7 +1275,7 @@ function editaServicios() {
                             url: "/",
                             maxFilesize: 500, // MB
                             maxFiles: 10, //CANTIDAD DE ARCHIVOS A SUBIR
-                            acceptedFiles: "image/jpeg, image/png, image/jpg",
+                            acceptedFiles: "image/jpeg, image/png, image/jpg, video/mp4, video/webm, video/ogg, video/x-msvideo",
                             addRemoveLinks: true, // QUITAR ARCHIVOS AGREGADOS
                             dictRemoveFile: "Remover",
                             paramName: "file", // The name that will be used to transfer the file

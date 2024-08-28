@@ -52,7 +52,7 @@ function traeDetallesServicio(ID, name, icon, descipcion) {
                                         onclick="Imgs(this.id)"
                                         class="ImageABD"
                                         src="${data.imgUrl}"
-                                        style="max-width: -webkit-fill-available;max-height: -webkit-fill-available;max-height: -webkit-fill-available;"
+                                        style="max-width: -webkit-fill-available;max-height: -webkit-fill-available;"
                                     />
                                     <div style="position: absolute;">
                                     ${
@@ -374,7 +374,7 @@ function crearElementToaddimmg(ID) {
         url: "/",
         maxFilesize: 500, // MB
         maxFiles: 10, //CANTIDAD DE ARCHIVOS A SUBIR
-        acceptedFiles: "image/jpeg, image/png, image/jpg",
+        acceptedFiles: "image/jpeg, image/png, image/jpg, video/mp4, video/webm, video/ogg, video/x-msvideo",
         addRemoveLinks: true, // QUITAR ARCHIVOS AGREGADOS
         dictRemoveFile: "Remover",
         paramName: "file", // The name that will be used to transfer the file
@@ -663,14 +663,30 @@ function traeSeccionesGaleria() {
                                 }
                             }
                         });
-                        console.log(objectValores);
                         console.log(objImgs);
                         $("#div_seccionesGaleria").html(html);
                         html = "";
                         let auxObjID = 0,
                             auxCouunt = 0,
-                            auxObjDot = 0;
+                            auxObjDot = 0,
+                            extension = "",
+                            nombreReal = "",
+                            nombrePartes = "",
+                            type = "";
                         objImgs.forEach((data, index) => {
+                            extension = "";
+                            nombreReal = data.imgUrl;
+                            nombrePartes = nombreReal.split(".");
+                            if (nombrePartes.length > 0) {
+                                extension = nombrePartes[Number(nombrePartes.length) - 1];
+                                if (extension == "jpeg" || extension == "png" || extension == "jpg") {
+                                    type = "img";
+                                } else {
+                                    type = "video";
+                                }
+                            } else {
+                                type == "img";
+                            }
                             if (auxObjID == data.IDSecc) {
                                 // console.log(auxObjID, data.IDSecc, auxObjDot);
                                 // console.log("data =>", data);
@@ -680,13 +696,18 @@ function traeSeccionesGaleria() {
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="item" style="height: 500px; display: flex; justify-content: center; align-items: center">
-                                                <img
-                                                    id="img_servicess_${data.ID}"
-                                                    onclick="Imgs(this.id)"
-                                                    class="ImageABD"
-                                                    src="${data.imgUrl}"
-                                                    style="max-width: -webkit-fill-available;max-height: -webkit-fill-available;max-height: -webkit-fill-available;"
-                                                />
+                                            ${
+                                                type == "img"
+                                                    ? `<img
+                                            id="img_servicess_${data.ID}"
+                                            onclick="Imgs(this.id)"
+                                            class="ImageABD"
+                                            src="${data.imgUrl}"
+                                            style="max-width: -webkit-fill-available;max-height: -webkit-fill-available;"
+                                        />`
+                                                    : `<video class="ImageABD" style="max-width: -webkit-fill-available;max-height: -webkit-fill-available;" src="${data.imgUrl}" id="video_servicess_${data.ID}" onclick="Imgs(this.id, 1)"></video>`
+                                            }
+                                                
                                             </div>
                                         </div>`;
 
@@ -697,13 +718,18 @@ function traeSeccionesGaleria() {
                                     // console.log(2);
                                     html += `<div class="col-lg-6">
                                                 <div class="item" style="height: 500px; display: flex; justify-content: center; align-items: center">
-                                                    <img
-                                                        id="img_servicess_${data.ID}"
-                                                        onclick="Imgs(this.id)"
-                                                        class="ImageABD"
-                                                        src="${data.imgUrl}"
-                                                        style="max-width: -webkit-fill-available;max-height: -webkit-fill-available;max-height: -webkit-fill-available;"
-                                                    />
+                                                ${
+                                                    type == "img"
+                                                        ? `<img
+                                                id="img_servicess_${data.ID}"
+                                                onclick="Imgs(this.id)"
+                                                class="ImageABD"
+                                                src="${data.imgUrl}"
+                                                style="max-width: -webkit-fill-available;max-height: -webkit-fill-available;"
+                                            />`
+                                                        : `<video class="ImageABD" style="max-width: -webkit-fill-available;max-height: -webkit-fill-available;" src="${data.imgUrl}" id="video_servicess_${data.ID}" onclick="Imgs(this.id, 1)"></video>`
+                                                }
+                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -722,13 +748,18 @@ function traeSeccionesGaleria() {
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="item" style="height: 500px; display: flex; justify-content: center; align-items: center">
-                                                            <img
-                                                                id="img_servicess_${data.ID}"
-                                                                onclick="Imgs(this.id)"
-                                                                class="ImageABD"
-                                                                src="${data.imgUrl}"
-                                                                style="max-width: -webkit-fill-available;max-height: -webkit-fill-available;max-height: -webkit-fill-available;"
-                                                            />
+                                                        ${
+                                                            type == "img"
+                                                                ? `<img
+                                                        id="img_servicess_${data.ID}"
+                                                        onclick="Imgs(this.id)"
+                                                        class="ImageABD"
+                                                        src="${data.imgUrl}"
+                                                        style="max-width: -webkit-fill-available;max-height: -webkit-fill-available;"
+                                                    />`
+                                                                : `<video class="ImageABD" style="max-width: -webkit-fill-available;max-height: -webkit-fill-available;" src="${data.imgUrl}" id="video_servicess_${data.ID}" onclick="Imgs(this.id, 1)"></video>`
+                                                        }
+                                                            
                                                         </div>
                                                     </div>`;
                                     // console.log("<3>", html);
@@ -765,13 +796,18 @@ function traeSeccionesGaleria() {
                                                 <div class="row">
                                                     <div class="col-lg-6">
                                                         <div class="item" style="height: 500px; display: flex; justify-content: center; align-items: center">
-                                                            <img
-                                                                id="img_servicess_${data.ID}"
-                                                                onclick="Imgs(this.id)"
-                                                                class="ImageABD"
-                                                                src="${data.imgUrl}"
-                                                                style="max-width: -webkit-fill-available;max-height: -webkit-fill-available;max-height: -webkit-fill-available;"
-                                                            />
+                                                        ${
+                                                            type == "img"
+                                                                ? `<img
+                                                        id="img_servicess_${data.ID}"
+                                                        onclick="Imgs(this.id)"
+                                                        class="ImageABD"
+                                                        src="${data.imgUrl}"
+                                                        style="max-width: -webkit-fill-available;max-height: -webkit-fill-available;"
+                                                    />`
+                                                                : `<video class="ImageABD" style="max-width: -webkit-fill-available;max-height: -webkit-fill-available;" src="${data.imgUrl}" id="video_servicess_${data.ID}" onclick="Imgs(this.id, 1)"></video>`
+                                                        }
+                                                            
                                                         </div>
                                                     </div>`;
                                     auxObjID = data.IDSecc;
@@ -871,7 +907,7 @@ function addImagesServices(ID) {
                                         onclick="Imgs(this.id)"
                                         class="ImageABD"
                                         src="${data.imgUrl}"
-                                        style="max-width: -webkit-fill-available;max-height: -webkit-fill-available;max-height: -webkit-fill-available;"
+                                        style="max-width: -webkit-fill-available;max-height: -webkit-fill-available;"
                                     />
                                     <div style="position: absolute;">
                                     ${
@@ -967,7 +1003,7 @@ function crearElementToaddimmgServices(ID) {
         url: "/",
         maxFilesize: 500, // MB
         maxFiles: 10, //CANTIDAD DE ARCHIVOS A SUBIR
-        acceptedFiles: "image/jpeg, image/png, image/jpg",
+        acceptedFiles: "image/jpeg, image/png, image/jpg, video/mp4, video/webm, video/ogg, video/x-msvideo",
         addRemoveLinks: true, // QUITAR ARCHIVOS AGREGADOS
         dictRemoveFile: "Remover",
         paramName: "file", // The name that will be used to transfer the file
