@@ -1,952 +1,1022 @@
 <!DOCTYPE html>
 <html lang="en" class="fa-events-icons-ready">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link type="text/css" rel="stylesheet" href="css/css.css" />
+        <link type="text/css" rel="stylesheet" href="css/css(1).css" />
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link type="text/css" rel="stylesheet" href="css/css.css">
-	<link type="text/css" rel="stylesheet" href="css/css(1).css">
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Jose Antonio Cruz Romero</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery-3.6.3.js"
-		integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-	<!-- Compiled and minified Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<!-- Compiled and minified Bootstrap JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Jose Antonio Cruz Romero</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <script
+            src="https://code.jquery.com/jquery-3.6.3.js"
+            integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+            crossorigin="anonymous"
+        ></script>
+        <!-- Compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <!-- Compiled and minified Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
-	<!--
+        <!--
 		Load Fonts
 	-->
-	<link href="./css/css(2).css" rel="stylesheet">
+        <link href="./css/css(2).css" rel="stylesheet" />
 
-	<!--
+        <!--
 		Load CSS
 	-->
-	<link rel="stylesheet" href="./css/basic.css">
-	<link rel="stylesheet" href="./css/layout.css">
-	<link rel="stylesheet" href="./css/blogs.css">
-	<link rel="stylesheet" href="./css/magnific-popup.css">
-	<link rel="stylesheet" href="./css/animate.css">
-	<link rel="stylesheet" href="./css/owl.carousel.css">
+        <link rel="stylesheet" href="./css/basic.css" />
+        <link rel="stylesheet" href="./css/layout.css" />
+        <link rel="stylesheet" href="./css/blogs.css" />
+        <link rel="stylesheet" href="./css/magnific-popup.css" />
+        <link rel="stylesheet" href="./css/animate.css" />
+        <link rel="stylesheet" href="./css/owl.carousel.css" />
 
-	<!--
+        <!--
 		Background Gradient
 	-->
-	<link rel="stylesheet" href="./css/gradient.css">
+        <link rel="stylesheet" href="./css/gradient.css" />
 
-	<!--
+        <!--
 		Template New-Skin
 	-->
-	<link rel="stylesheet" href="./css/new-skin.css">
+        <link rel="stylesheet" href="./css/new-skin.css" />
 
+        <style>
+            .modal-content {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+            }
 
-	<style>
-		.modal-content {
-			margin: auto;
-			display: block;
-			width: 80%;
-			max-width: 700px;
-		}
+            /* Caption of Modal Image */
+            #caption {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+                text-align: center;
+                color: #ccc;
+                padding: 10px 0;
+                height: 150px;
+            }
 
-		/* Caption of Modal Image */
-		#caption {
-			margin: auto;
-			display: block;
-			width: 80%;
-			max-width: 700px;
-			text-align: center;
-			color: #ccc;
-			padding: 10px 0;
-			height: 150px;
-		}
+            /* Add Animation */
+            .modal-content,
+            #caption {
+                -webkit-animation-name: zoom;
+                -webkit-animation-duration: 0.6s;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+            }
 
-		/* Add Animation */
-		.modal-content,
-		#caption {
-			-webkit-animation-name: zoom;
-			-webkit-animation-duration: 0.6s;
-			animation-name: zoom;
-			animation-duration: 0.6s;
-		}
+            @-webkit-keyframes zoom {
+                from {
+                    -webkit-transform: scale(0);
+                }
 
-		@-webkit-keyframes zoom {
-			from {
-				-webkit-transform: scale(0)
-			}
+                to {
+                    -webkit-transform: scale(1);
+                }
+            }
 
-			to {
-				-webkit-transform: scale(1)
-			}
-		}
+            @keyframes zoom {
+                from {
+                    transform: scale(0);
+                }
 
-		@keyframes zoom {
-			from {
-				transform: scale(0)
-			}
+                to {
+                    transform: scale(1);
+                }
+            }
 
-			to {
-				transform: scale(1)
-			}
-		}
+            /* The Close Button */
+            .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+            }
 
-		/* The Close Button */
-		.close {
-			position: absolute;
-			top: 15px;
-			right: 35px;
-			color: #f1f1f1;
-			font-size: 40px;
-			font-weight: bold;
-			transition: 0.3s;
-		}
+            .close:hover,
+            .close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
 
-		.close:hover,
-		.close:focus {
-			color: #bbb;
-			text-decoration: none;
-			cursor: pointer;
-		}
+            /* 100% Image Width on Smaller Screens */
+            @media only screen and (max-width: 700px) {
+                .modal-content {
+                    width: 100%;
+                }
+            }
 
-		/* 100% Image Width on Smaller Screens */
-		@media only screen and (max-width: 700px) {
-			.modal-content {
-				width: 100%;
-			}
-		}
+            .modal {
+                top: 25%;
+                display: none;
+                /* Hidden by default */
+                position: fixed;
+                /* Sit on top */
+                padding-top: 100px;
+                /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%;
+                /* Full width */
+                height: 100%;
+                /* Full height */
+                overflow: auto;
+                /* Enable scroll if needed */
+                background-color: rgb(0, 0, 0);
+                /* Fallback color */
+                background-color: rgba(0, 0, 0, 0.9);
+                /* Black w/ opacity */
+            }
 
-		.modal {
-			top: 25%;
-			display: none;
-			/* Hidden by default */
-			position: fixed;
-			/* Stay in place */
-			z-index: 1;
-			/* Sit on top */
-			padding-top: 100px;
-			/* Location of the box */
-			left: 0;
-			top: 0;
-			width: 100%;
-			/* Full width */
-			height: 100%;
-			/* Full height */
-			overflow: auto;
-			/* Enable scroll if needed */
-			background-color: rgb(0, 0, 0);
-			/* Fallback color */
-			background-color: rgba(0, 0, 0, 0.9);
-			/* Black w/ opacity */
-		}
+            .carousel-indicators li {
+                border: 1px solid #3498db;
+            }
 
-		.carousel-indicators li {
-			border: 1px solid #3498DB;
-		}
+            .carousel-indicators .active {
+                background-color: #3498db;
+            }
+        </style>
+        <link rel="stylesheet" href="css/demo-1-colors.css" />
+    </head>
 
-		.carousel-indicators .active {
-			background-color: #3498DB;
-		}
-	</style>
-	<link rel="stylesheet" href="css/demo-1-colors.css">
-</head>
+    <body style="max-width: 1198px">
+        <div class="page new-skin">
+            <!-- preloader -->
+            <div class="preloader" style="display: none">
+                <div class="centrize full-width">
+                    <div class="vertical-center">
+                        <div class="spinner" style="display: none">
+                            <div class="double-bounce1"></div>
+                            <div class="double-bounce2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<body style="max-width: 1198px;">
-	<div class="page new-skin">
-
-		<!-- preloader -->
-		<div class="preloader" style="display: none;">
-			<div class="centrize full-width">
-				<div class="vertical-center">
-					<div class="spinner" style="display: none;">
-						<div class="double-bounce1"></div>
-						<div class="double-bounce2"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!--
+            <!--
 			Container
 		-->
-		<div class="container opened" data-animation-in="fadeInLeft" data-animation-out="fadeOutLeft">
-
-			<!--
+            <div class="container opened" data-animation-in="fadeInLeft" data-animation-out="fadeOutLeft">
+                <!--
 				Header
 			-->
-			<header class="header">
+                <header class="header">
+                    <!-- header profile -->
+                    <div class="profile">
+                        <div class="title">Antonio Cruz</div>
+                        <div class="subtitle subtitle-typed">Desarrollador FULL STACK</div>
+                    </div>
 
-				<!-- header profile -->
-				<div class="profile">
-					<div class="title">Antonio Cruz</div>
-					<div class="subtitle subtitle-typed">Desarrollador WEB</div>
-				</div>
-
-				<!-- menu -->
-				<div class="top-menu">
-					<ul>
-						<li class="active li-menu" id="li_abaout">
-							<a href="#about-card" id="ref_about">
-								<span class="material-icons">person</span>
-								<span class="link">Acerca</span>
-							</a>
-						</li>
-						<li id="li_resumen" class="li-menu">
-							<a href="#resume-card" id="ref_resumen">
-								<span class="material-icons">work</span>
-								<span class="link">Experiencia</span>
-							</a>
-						</li>
-						<li id="li_conocimientos" class="li-menu">
-							<a href="#conocimientos" id="ref_mail">
-								<span class="material-icons">psychology</span>
-								<span class="link">conocimientos</span>
-							</a>
-						</li>
-						<li id="li_galeria" class="li-menu">
-							<a href="#galeria" id="ref_galery">
-								<span class="material-icons">collections</span>
-								<span class="link">Galería</span>
-							</a>
-						</li>
-						<!-- <li id="li_plantillas" class="li-menu">
+                    <!-- menu -->
+                    <div class="top-menu">
+                        <ul>
+                            <li class="active li-menu" id="li_abaout">
+                                <a href="#about-card" id="ref_about">
+                                    <span class="material-icons">person</span>
+                                    <span class="link">Acerca</span>
+                                </a>
+                            </li>
+                            <li id="li_resumen" class="li-menu">
+                                <a href="#resume-card" id="ref_resumen">
+                                    <span class="material-icons">work</span>
+                                    <span class="link">Experiencia</span>
+                                </a>
+                            </li>
+                            <li id="li_conocimientos" class="li-menu">
+                                <a href="#conocimientos" id="ref_mail">
+                                    <span class="material-icons">psychology</span>
+                                    <span class="link">conocimientos</span>
+                                </a>
+                            </li>
+                            <li id="li_galeria" class="li-menu">
+                                <a href="#galeria" id="ref_galery">
+                                    <span class="material-icons">collections</span>
+                                    <span class="link">Galería</span>
+                                </a>
+                            </li>
+                            <!-- <li id="li_plantillas" class="li-menu">
 							<a href="#plantillas" id="ref_plantillas">
 								<span class="material-icons">screenshot_monitor</span>
 								<span class="link">Plantillas</span>
 							</a>
 						</li> -->
-						<li id="li_ir" class="li-menu" onclick="irABD()">
+                            <!-- <li id="li_ir" class="li-menu" onclick="irABD()">
 							<a id="ir">
 								<span class="material-icons">screenshot_monitor</span>
 								<span class="link">Ir</span>
 							</a>
-						</li>
-					</ul>
-				</div>
+						</li> -->
+                        </ul>
+                    </div>
+                </header>
 
-			</header>
-
-			<!--
+                <!--
 				Card - Started
 			-->
-			<div class="card-started" id="home-card">
-
-				<!--
+                <div class="card-started" id="home-card">
+                    <!--
 					Profile
 				-->
-				<div class="profile no-photo">
+                    <div class="profile no-photo">
+                        <!-- profile image -->
+                        <div class="slide" style="background-image: url(./img/perfil2.jpg)"></div>
 
-					<!-- profile image -->
-					<div class="slide" style="background-image: url(./img/perfil2.jpg);"></div>
+                        <!-- profile titles -->
+                        <div class="title">Jose Antonio Cruz Romero</div>
+                        <!--<div class="subtitle">Web Designer</div>-->
+                        <div class="subtitle subtitle-typed">Desarrollador WEB</div>
 
-					<!-- profile titles -->
-					<div class="title">Jose Antonio Cruz Romero</div>
-					<!--<div class="subtitle">Web Designer</div>-->
-					<div class="subtitle subtitle-typed">Desarrollador WEB</div>
+                        <!-- profile buttons -->
+                        <div class="lnks">
+                            <a href="./docs/CV.pdf" download class="lnk">
+                                <span class="text">Descargar CV</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
-					<!-- profile buttons -->
-					<div class="lnks">
-						<a href="./docs/CV-Jose Antonio.pdf" download class="lnk">
-							<span class="text">Descargar CV</span>
-						</a>
-					</div>
-
-				</div>
-
-			</div>
-
-			<!-- 
+                <!-- 
 				Card - About
 			-->
-			<div class="card-inner active" id="about-card">
-				<div class="card-wrap">
-
-					<!-- 
+                <div class="card-inner active" id="about-card">
+                    <div class="card-wrap">
+                        <!-- 
 						About 
 					-->
-					<div class="content about">
+                        <div class="content about">
+                            <!-- title -->
+                            <div class="title"><span class="first-word">Acerca</span> de Mí</div>
 
-						<!-- title -->
-						<div class="title"><span class="first-word">Acerca</span> de Mí</div>
+                            <!-- content -->
+                            <div class="row">
+                                <div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+                                    <div class="text-box">
+                                        <p>
+                                            Soy apasionado de la tecnología, con todas las ganas de aprender y desarrollarme profesionalmente así como
+                                            persona. Me considero una persona que no deja de aprender, con alto sentido de
+                                            <span class="word_blue"
+                                                >responsabilidad, honesto, proactivo, organizado, estable, puntual, comprometido, se trabajar en
+                                                equipo, me gusta compartir mis conocimientos, aprendo rápido y con ganas de superarme</span
+                                            >, siempre doy lo mejor de mí.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+                                    <div class="info-list">
+                                        <ul>
+                                            <li><strong>Edad . . . . .</strong> 28 años</li>
+                                            <li><strong>Correo . . . . .</strong> bektor@live.com</li>
+                                            <li><strong>Ubicación . . . . .</strong> 54720 Cuautitlán Izcalli</li>
+                                            <li><strong>Español . . . . .</strong> Nativo</li>
+                                            <li><strong>Ingles . . . . .</strong> Intermedio (B1)</li>
+                                            <li><strong>Universidad . . . . .</strong> TESCI</li>
+                                            <li><strong>Carrera . . . . .</strong> Ing. en Sistemas Computacionales</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-						<!-- content -->
-						<div class="row">
-							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-								<div class="text-box">
-									<p>
-										Soy apasionado de la tecnología, con todas las ganas de aprender y desarrollarme
-										profesionalmente así como persona.
-										Me considero una persona que no deja de aprender, con alto sentido de <span
-											class="word_blue">responsabilidad, honesto, proactivo, organizado, estable,
-											puntual, comprometido, se trabajar en equipo, me gusta compartir mis
-											conocimientos, aprendo rápido y con ganas de superarme</span>, siempre doy
-										lo mejor de mí.
-									</p>
-								</div>
-							</div>
-							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-								<div class="info-list">
-									<ul>
-										<li><strong>Edad . . . . .</strong> 26 años</li>
-										<li><strong>Correo . . . . .</strong> bektor@live.com</li>
-										<li><strong>Ubicación . . . . .</strong> 54720 Cuautitlán Izcalli</li>
-										<li><strong>Español . . . . .</strong> Nativo</li>
-										<li><strong>Ingles . . . . .</strong> Intermedio (B1)</li>
-										<li><strong>Universidad . . . . .</strong> TESCI</li>
-										<li><strong>Carrera . . . . .</strong> Ing. en Sistemas Computacionales</li>
-									</ul>
-								</div>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!--
+                <!--
 				Card - Resume
 			-->
-			<div class="card-inner" id="resume-card">
-				<div class="card-wrap">
-
-					<!--
+                <div class="card-inner" id="resume-card">
+                    <div class="card-wrap">
+                        <!--
 						Resume
 					-->
-					<div class="content resume">
-
-						<!-- title -->
-						<div class="title">
-							<div class="first-letter">Experiencia</div>
-						</div>
-
-						<!-- content -->
-						<div class="row">
-
-							<!-- experience -->
-							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-								<div class="resume-title border-line-h">
-									<div class="icon"><i class="fa fa-briefcase"></i></div>
-									<div class="name">Experiencia</div>
-								</div>
-								<div class="resume-items">
-									<div class="resume-item border-line-h active">
-										<div class="date">Oct 2022 - Actual</div>
-										<div class="name">Ingeniero TI (Aplicaciones de Operación)</div>
-										<br>
-										<div class="company">Grupo CISA</div>
-										<br>
-										<p>
-											Me desempeño como <span class="word_blue">Desarrollador de Aplicaciones
-												WEB</span>, con mayor responsabilidad en las <span
-												class="word_blue">aplicaciones Móviles</span> ya que con mi experiencia
-											en anteriores trabajos logre colocarme como un pilar en esta área a pesar
-											del poco tiempo, donde me han inclinado más en <span class="word_blue">dar
-												solución a los procesos en donde no se tiene tan fácil acceso a una
-												computadora</span>. <br>
-											En el poco tiempo que llevo aquí puedo destacar que en <span
-												class="word_blue">2 meses ya les desarrolle una app movil</span>,
-											totalmente offline, y que Actualmente se encuentra disponible en la Google
-											Play Store <a
-												href="https://play.google.com/store/apps/details?id=com.cisa.cisapp"
-												target="_blank" class="word_blue">Click Aquí para ver la app en Google
-												PLay Store</a>
-										</p>
-									</div>
-								</div>
-							</div>
-
-							<!-- education -->
-							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
-								<div class="resume-title border-line-h">
-									<div class="icon"><i class="fa fa-code"></i></div>
-									<div class="name">Desarrollo</div>
-								</div>
-								<div class="resume-items">
-									<div class="resume-item border-line-h active">
-										<div class="date word_blue">Apps</div>
-										<div class="name word_blue lgn">&#x2022; Framework Cordova</div>
-										<div class="name word_blue lgn">&#x2022; Framework 7</div>
-										<div class="name word_blue lgn">&#x2022; HTML</div>
-										<div class="name word_blue lgn">&#x2022; JavaScript</div>
-										<div class="name word_blue lgn">&#x2022; Jquery</div>
-										<div class="name word_blue lgn">&#x2022; SqLite</div>
-										<div class="name word_blue lgn">&#x2022; AJAX</div>
-										<div class="name word_blue lgn">&#x2022; JSON</div>
-										<div class="name word_blue lgn">&#x2022; Android Studio</div>
-										<div class="name word_blue lgn">&#x2022; CSS</div>
-										<div class="name lgn">&#x2022; Actualmente estoy migrnado mi app al Framework
-											IONIC con Vue.js</div>
-									</div>
-								</div>
-								<div class="resume-items">
-									<div class="resume-item border-line-h active">
-										<div class="date word_blue">Portales WEB</div>
-										<div class="name word_blue lgn">&#x2022; SQL SERVER</div>
-										<div class="name word_blue lgn">&#x2022; PHP</div>
-										<div class="name word_blue lgn">&#x2022; HTML</div>
-										<div class="name word_blue lgn">&#x2022; JavaScript</div>
-										<div class="name word_blue lgn">&#x2022; Jquery</div>
-										<div class="name word_blue lgn">&#x2022; AJAX</div>
-										<div class="name word_blue lgn">&#x2022; JSON</div>
-										<div class="name word_blue lgn">&#x2022; Consumo de APIs</div>
-										<div class="name word_blue lgn">&#x2022; Bootstrap</div>
-										<div class="name word_blue lgn">&#x2022; CSS</div>
-										<div class="name word_blue lgn">&#x2022; GitHub</div>
-										<div class="name word_blue lgn">&#x2022; Postman</div>
-										<div class="name word_blue lgn">&#x2022; IIlustrator</div>
-										<div class="name word_blue lgn">&#x2022; Photoshop</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="col col-d-6 col-t-6 col-m-12 border-line-v"
-								style="border-top: 1px solid #e6e5e5;">
-								<div class="resume-items">
-									<div class="resume-item border-line-h active">
-										<div class="date">Oct 2021 - Oct 2022</div>
-										<div class="name">Desarrollador WEB</div>
-										<br>
-										<div class="company">Tech2B(FIELD)</div>
-										<br>
-										<p>
-											Participe en el desarrollo de una plataforma totalmente personalizable para
-											pequeñas, medianas y Grandes empresas. Con la premisa de <span
-												class="word_blue">evidenciar el trabajo en campo</span>. Logrado a
-											traves de una <span class="word_blue">app movil y un portal Administrador
-												WEB:</span> <br> <br>
-											- <span class="word_blue">Generar reportes</span> del trabajo realizo por el
-											personal de campo. <br>
-											- <span class="word_blue">Tomar fotografías</span> con el dispositivo movil.
-											<br>
-											- <span class="word_blue">Recolectar firmas.</span> <br>
-											- <span class="word_blue">Generar Gráficas y estadísticas</span> de las
-											evidencias, horarios, ubicaciones etc. <br>
-											<br>
-											Para conocer más de FIELD <a href="https://field.com.mx/" target="_blank"
-												class="word_blue">https://field.com.mx/</a>
-										</p>
-									</div>
-								</div>
-							</div>
-
-							<!-- education -->
-							<div class="col col-d-6 col-t-6 col-m-12 border-line-v"
-								style="border-top: 1px solid #e6e5e5;">
-								<div class="resume-items">
-									<div class="resume-item border-line-h active">
-										<div class="date word_blue">App</div>
-										<div class="name word_blue lgn">&#x2022; Framework Cordova</div>
-										<div class="name word_blue lgn">&#x2022; Framework 7</div>
-										<div class="name word_blue lgn">&#x2022; HTML</div>
-										<div class="name word_blue lgn">&#x2022; JavaScript</div>
-										<div class="name word_blue lgn">&#x2022; Jquery</div>
-										<div class="name word_blue lgn">&#x2022; SqLite</div>
-										<div class="name word_blue lgn">&#x2022; AJAX</div>
-										<div class="name word_blue lgn">&#x2022; JSON</div>
-										<div class="name word_blue lgn">&#x2022; Android Studio</div>
-										<div class="name word_blue lgn">&#x2022; CSS</div>
-									</div>
-									<div class="resume-items">
-										<div class="resume-item border-line-h active">
-											<div class="date word_blue">Portales WEB</div>
-											<div class="name word_blue lgn">&#x2022; MYSQL</div>
-											<div class="name word_blue lgn">&#x2022; PHP</div>
-											<div class="name word_blue lgn">&#x2022; HTML</div>
-											<div class="name word_blue lgn">&#x2022; JavaScript</div>
-											<div class="name word_blue lgn">&#x2022; Jquery</div>
-											<div class="name word_blue lgn">&#x2022; AJAX</div>
-											<div class="name word_blue lgn">&#x2022; JSON</div>
-											<div class="name word_blue lgn">&#x2022; Consumo de APIs</div>
-											<div class="name word_blue lgn">&#x2022; Bootstrap</div>
-											<div class="name word_blue lgn">&#x2022; CSS</div>
-											<div class="name word_blue lgn">&#x2022; GitHub</div>
-											<div class="name word_blue lgn">&#x2022; Postman</div>
-											<div class="name word_blue lgn">&#x2022; IIlustrator</div>
-											<div class="name word_blue lgn">&#x2022; Photoshop</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="col col-d-6 col-t-6 col-m-12 border-line-v"
-								style="border-top: 1px solid #e6e5e5;">
-								<div class="resume-items">
-									<div class="resume-item border-line-h active">
-										<div class="date">Jun 2020 - Oct 2021</div>
-										<div class="name">Auxiliar de Sistemas</div>
-										<br>
-										<div class="company">Grupo AirCond</div>
-										<br>
-										<p>
-											Me desempeñe como Auxiliar de Sistemas al inicio, pero por mi afan de más
-											conocimiento y más aporte empece a <span class="word_blue">desarrollar por
-												mi cuenta</span> un portal que apoyaría al equipo de monitoreo, para
-											consultar datos de las unidades, poder actualizar los datos y agregar nuevos
-											datos.
-											<br>
-											Se me dio la confianza para seguir desarrollando más aplicaciones:
-											<br>
-											<span class="word_blue">SISGAC</span>: ERP In House <br>
-											<span class="word_blue">APP Paquetería</span> en Android Studio para
-											recepción de paquetes y entrega de los mismos. <br>
-											<span class="word_blue">APP de checador</span> para la oficina en Android
-											Studio. <br>
-											Para conocer mis Apps en Grupo AirCond <a
-												href="https://drive.google.com/drive/folders/1GFIoxrWjevB8JHLTSuUEHW7ovqNCOLh0?usp=sharing"
-												target="_blank" class="word_blue">Ir Portafolio</a>
-										</p>
-									</div>
-								</div>
-							</div>
-
-							<!-- education -->
-							<div class="col col-d-6 col-t-6 col-m-12 border-line-v"
-								style="border-top: 1px solid #e6e5e5;">
-								<div class="resume-items">
-									<div class="resume-item border-line-h active">
-										<div class="date word_blue">App</div>
-										<div class="name word_blue lgn">&#x2022; SqLite</div>
-										<div class="name word_blue lgn">&#x2022; Volley</div>
-										<div class="name word_blue lgn">&#x2022; JSON</div>
-										<div class="name word_blue lgn">&#x2022; Android Studio</div>
-										<div class="name word_blue lgn">&#x2022; JAVA</div>
-									</div>
-									<div class="resume-items">
-										<div class="resume-item border-line-h active">
-											<div class="date word_blue">Portales WEB</div>
-											<div class="name word_blue lgn">&#x2022; MYSQL</div>
-											<div class="name word_blue lgn">&#x2022; PHP</div>
-											<div class="name word_blue lgn">&#x2022; HTML</div>
-											<div class="name word_blue lgn">&#x2022; JavaScript</div>
-											<div class="name word_blue lgn">&#x2022; Jquery</div>
-											<div class="name word_blue lgn">&#x2022; AJAX</div>
-											<div class="name word_blue lgn">&#x2022; Bootstrap</div>
-											<div class="name word_blue lgn">&#x2022; CSS</div>
-										</div>
-									</div>
-									<div class="resume-item border-line-h active">
-										<div class="date word_blue">Otras Actividades</div>
-										<div class="name word_blue lgn">&#x2022; Soporte a oficina</div>
-										<div class="name word_blue lgn">&#x2022; Soporte a compañeros foráneos</div>
-										<div class="name word_blue lgn">&#x2022; IIlustrator</div>
-										<div class="name word_blue lgn">&#x2022; Photoshop</div>
-										<div class="name word_blue lgn">&#x2022; Marketing (Google ADS, Facebook)</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="clear"></div>
-						</div>
-
-					</div>
-
-				</div>
-			</div>
-
-			<div class="card-inner" id="conocimientos">
-				<div class="card-wrap">
-					<div class="content about">
-
-						<!-- title -->
-						<div class="title"><span class="first-word">O</span>tros Conocimientos</div>
-
-						<!-- content -->
-						<div class="row">
-
-							<!-- skill item -->
-							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-								<div class="skills-list list">
-									<ul>
-										<li>
-											<div><span class="material-icons"
-													style="color: #3498DB !important; margin-right: 15px;">insights</span>Desarrollo
-												con Metodología de Scrum</div>
-										</li>
-										<li>
-											<div>
-												<span class="material-icons"
-													style="color: #3498DB !important; margin-right: 15px;">mobile_friendly</span>
-												Desarrollo de apps Híbridas
-											</div>
-										</li>
-										<li>
-											<div><span class="material-icons"
-													style="color: #3498DB !important; margin-right: 15px;">door_front</span>Desarrollo
-												Front End</div>
-										</li>
-										<li>
-											<div><span class="material-icons"
-													style="color: #3498DB !important; margin-right: 15px;">view_agenda</span>Desarrollo
-												Back End</div>
-										</li>
-
-										<li>
-											<div><span class="material-icons"
-													style="color: #3498DB !important; margin-right: 15px;">account_tree</span>Levantamiento
-												de Requerimientos</div>
-										</li>
-										<li>
-											<div><span class="material-icons"
-													style="color: #3498DB !important; margin-right: 15px;">wallpaper</span>Uso
-												de Photoshop</div>
-										</li>
-										<li>
-											<div><span class="material-icons"
-													style="color: #3498DB !important; margin-right: 15px;">satellite</span>Uso
-												de IIlustrator</div>
-										</li>
-										<li>
-											<div><span class="material-icons"
-													style="color: #3498DB !important; margin-right: 15px;">print</span>Hojas
-												de Impresión</div>
-										</li>
-										<li>
-											<div><span class="material-icons"
-													style="color: #3498DB !important; margin-right: 15px;">groups</span>Trabajo
-												en equipo</div>
-										</li>
-										<li>
-											<div><span class="material-icons"
-													style="color: #3498DB !important; margin-right: 15px;">support_agent</span>Soporte
-												a Usuarios de mis apps.</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="card-inner" id="galeria">
-				<div class="card-wrap">
-					<div class="content about">
-
-						<!-- title -->
-						<div class="title"><span class="first-word">G</span>aleria</div>
-
-						<!-- content -->
-						<div class="row">
-							<!-- skill item -->
-							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-								<div class="title"><span class="first-word">Aplicación </span>en Grupo CISA</div>
-								<div id="myCarouselCustom" class="carousel slide" data-ride="carousel">
-									<!-- Indicators -->
-									<ol class="carousel-indicators">
-										<li data-target="#myCarouselCustom" data-slide-to="0" class="active"></li>
-										<li data-target="#myCarouselCustom" data-slide-to="1"></li>
-										<li data-target="#myCarouselCustom" data-slide-to="2"></li>
-										<li data-target="#myCarouselCustom" data-slide-to="3"></li>
-										<li data-target="#myCarouselCustom" data-slide-to="4"></li>
-									</ol>
-
-									<!-- Wrapper for slides -->
-									<div class="carousel-inner">
-										<div class="item active">
-											<img src="./img/lg-1.jpg" alt="" id="img1" onclick="Imgs(this.id)">
-										</div>
-
-										<div class="item">
-											<img src="./img/lg-2.jpg" alt="" id="img2" onclick="Imgs(this.id)">
-										</div>
-
-										<div class="item">
-											<img src="./img/lg-3.jpg" alt="" id="img3" onclick="Imgs(this.id)">
-										</div>
-
-										<div class="item">
-											<img src="./img/lg-4.jpg" alt="" id="img4" onclick="Imgs(this.id)">
-										</div>
-
-										<div class="item">
-											<img src="./img/lg-5.jpg" alt="" id="img5" onclick="Imgs(this.id)">
-										</div>
-
-									</div>
-								</div>
-								<br>
-								<div class="title"><span class="first-word">Portal Administrador</span> en Grupo CISA
-								</div>
-								<div id="myCarouselCustom2" class="carousel slide" data-ride="carousel">
-									<!-- Indicators -->
-									<ol class="carousel-indicators">
-										<li data-target="#myCarouselCustom2" data-slide-to="0" class="active"></li>
-										<li data-target="#myCarouselCustom2" data-slide-to="1"></li>
-										<li data-target="#myCarouselCustom2" data-slide-to="2"></li>
-										<li data-target="#myCarouselCustom2" data-slide-to="3"></li>
-									</ol>
-
-									<!-- Wrapper for slides -->
-									<div class="carousel-inner">
-										<div class="item active">
-											<img src="./img/sm-1.jpg" alt="" id="img6" onclick="Imgs(this.id)">
-										</div>
-
-										<div class="item">
-											<img src="./img/sm-2.jpg" alt="" id="img7" onclick="Imgs(this.id)">
-										</div>
-
-										<div class="item">
-											<img src="./img/sm-3.jpg" alt="" id="img8" onclick="Imgs(this.id)">
-										</div>
-
-										<div class="item">
-											<img src="./img/sm-4.jpg" alt="" id="img9" onclick="Imgs(this.id)">
-										</div>
-									</div>
-								</div>
-								<br>
-								<div class="title"><span class="first-word">Aplicaciones</span> FIELD</div>
-								<div id="myCarouselCustom3" class="carousel slide" data-ride="carousel">
-									<!-- Indicators -->
-									<ol class="carousel-indicators">
-										<li data-target="#myCarouselCustom3" data-slide-to="0" class="active"></li>
-										<li data-target="#myCarouselCustom3" data-slide-to="1"></li>
-										<li data-target="#myCarouselCustom3" data-slide-to="2"></li>
-										<li data-target="#myCarouselCustom3" data-slide-to="3"></li>
-										<li data-target="#myCarouselCustom3" data-slide-to="4"></li>
-									</ol>
-
-									<!-- Wrapper for slides -->
-									<div class="carousel-inner">
-										<div class="item active">
-											<img src="./img/lg-6.jpg" alt="" id="img10" onclick="Imgs(this.id)">
-										</div>
-
-										<div class="item">
-											<img src="./img/lg-7.jpg" alt="" id="img11" onclick="Imgs(this.id)">
-										</div>
-
-										<div class="item">
-											<img src="./img/lg-8.jpg" alt="" id="img12" onclick="Imgs(this.id)">
-										</div>
-
-										<div class="item">
-											<img src="./img/sm-5.jpg" alt="" id="img13" onclick="Imgs(this.id)">
-										</div>
-
-										<div class="item">
-											<img src="./img/sm-6.jpg" alt="" id="img14" onclick="Imgs(this.id)">
-										</div>
-									</div>
-								</div>
-								<br>
-
-
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="card-inner" id="plantillas">
-				<div class="card-wrap">
-					<div class="content about">
-
-						<!-- title -->
-						<div class="title"><span class="first-word">P</span>lantilllas</div>
-
-						<!-- content -->
-						<div class="row">
-
-							<!-- skill item -->
-							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-								<div class="title"><span class="first-word">No. 1</span> Ollice </div>
-								<img src="./img/plantillas/ollie.png" style="width: inherit;" id="plantilla_1"
-									onclick="plantilla(this.id)">
-							</div>
-
-							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-								<div class="title"><span class="first-word">No. 2</span> Solar </div>
-								<img src="./img/plantillas/solar.png" style="width: inherit;" id="plantilla_2"
-									onclick="plantilla(this.id)">
-							</div>
-
-							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-								<div class="title"><span class="first-word">No. 3</span> Simple </div>
-								<img src="./img/plantillas/simple.png" style="width: inherit;" id="plantilla_3"
-									onclick="plantilla(this.id)">
-							</div>
-
-							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-								<div class="title"><span class="first-word">No. 4</span> Nurgo </div>
-								<img src="./img/plantillas/nurgo.png" style="width: inherit;" id="plantilla_4"
-									onclick="plantilla(this.id)">
-							</div>
-
-							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-								<div class="title"><span class="first-word">No. 5</span> Little </div>
-								<img src="./img/plantillas/little.png" style="width: inherit;" id="plantilla_5"
-									onclick="plantilla(this.id)">
-							</div>
-
-							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-								<div class="title"><span class="first-word">No. 6</span> LimeLight </div>
-								<img src="./img/plantillas/limelight.png" style="width: inherit;" id="plantilla_6"
-									onclick="plantilla(this.id)">
-							</div>
-
-							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-								<div class="title"><span class="first-word">No. 7</span> Koppe </div>
-								<img src="./img/plantillas/koppe.png" style="width: inherit;" id="plantilla_7"
-									onclick="plantilla(this.id)">
-							</div>
-
-							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-								<div class="title"><span class="first-word">No. 8</span> Inance </div>
-								<img src="./img/plantillas/inance.png" style="width: inherit;" id="plantilla_8"
-									onclick="plantilla(this.id)">
-							</div>
-
-							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-								<div class="title"><span class="first-word">No. 9</span> Heustonn </div>
-								<img src="./img/plantillas/heustonn.png" style="width: inherit;" id="plantilla_9"
-									onclick="plantilla(this.id)">
-							</div>
-
-							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
-								<div class="title"><span class="first-word">No. 10</span> Template </div>
-								<img src="./img/plantillas/template.png" style="width: inherit;" id="plantilla_10"
-									onclick="plantilla(this.id)">
-							</div>
-
-							<div class="clear"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-	<div id="popUp" class="modal">
-		<span class="close">&times;</span>
-		<img class="modal-content" id="img01">
-		<div id="caption"></div>
-	</div>
-
-	<div id="popUp1" class="modal">
-		<span class="close">&times;</span>
-		<div class="col-lg-12" style="margin-top: -40px;">
-			<iframe id="frameHTML" src="" style="width: 100%;height: 90vh;"></iframe>
-		</div>
-	</div>
-
-	<link rel="stylesheet" href="./css/bar.css">
-	<script>
-
-		$("#ref_about").click(function () {
-			$(".card-inner").removeClass("active");
-			$("#about-card").addClass("active");
-
-			$(".li-menu").removeClass("active");
-			$("#li_abaout").addClass("active");
-		});
-		$("#ref_resumen").click(function () {
-			$(".card-inner").removeClass("active");
-			$("#resume-card").addClass("active");
-
-			$(".li-menu").removeClass("active");
-			$("#li_resumen").addClass("active");
-		});
-		$("#ref_mail").click(function () {
-			$(".card-inner").removeClass("active");
-			$("#conocimientos").addClass("active");
-
-			$(".li-menu").removeClass("active");
-			$("#li_conocimientos").addClass("active");
-		});
-		$("#ref_galery").click(function () {
-			$(".card-inner").removeClass("active");
-			$("#galeria").addClass("active");
-
-			$(".li-menu").removeClass("active");
-			$("#li_galeria").addClass("active");
-		});
-		$("#ref_plantillas").click(function () {
-			$(".card-inner").removeClass("active");
-			$("#plantillas").addClass("active");
-
-			$(".li-menu").removeClass("active");
-			$("#li_plantillas").addClass("active");
-		});
-
-		// Call carousel manually
-		$('#myCarouselCustom').carousel({
-			interval: 3000,
-			wrap: true
-		});
-		$('#myCarouselCustom2').carousel({
-			interval: 3000,
-			wrap: true
-		});
-		$('#myCarouselCustom3').carousel({
-			interval: 3000,
-			wrap: true
-		});
-
-		function Imgs(imga) {
-			var modal = document.getElementById('popUp');
-			var img = document.getElementById(imga);
-			var modalImg = document.getElementById("img01");
-			var captionText = document.getElementById("caption");
-			modal.style.display = "block";
-			modalImg.src = img.src;
-			captionText.innerHTML = img.alt;
-
-			var span = document.getElementsByClassName("close")[0];
-			var span2 = document.getElementsByClassName("modal")[0];
-			span2.onclick = function () {
-				modal.style.display = "none";
-			}
-			span.onclick = function () {
-				modal.style.display = "none";
-			}
-		}
-
-		function plantilla(id) {
-			var modal = document.getElementById('popUp1');
-			if (id == 'plantilla_1') {
-				$("#frameHTML").prop("src", "./plantillas/ollie/index.html")
-			} else if (id == 'plantilla_2') {
-				$("#frameHTML").prop("src", "./plantillas/solar/index.html")
-			} else if (id == 'plantilla_3') {
-				$("#frameHTML").prop("src", "./plantillas/simple/index.html")
-			} else if (id == 'plantilla_4') {
-				$("#frameHTML").prop("src", "./plantillas/nurgo/index.html")
-			} else if (id == 'plantilla_5') {
-				$("#frameHTML").prop("src", "./plantillas/little/index.html")
-			} else if (id == 'plantilla_6') {
-				$("#frameHTML").prop("src", "./plantillas/limelight/index.html")
-			} else if (id == 'plantilla_7') {
-				$("#frameHTML").prop("src", "./plantillas/koppee/index.html")
-			} else if (id == 'plantilla_8') {
-				$("#frameHTML").prop("src", "./plantillas/inance/index.html")
-			} else if (id == 'plantilla_9') {
-				$("#frameHTML").prop("src", "./plantillas/heustonn/index.html")
-			} else if (id == 'plantilla_10') {
-				$("#frameHTML").prop("src", "./plantillas/template/index.html")
-			}
-			// var img = document.getElementById(imga);
-			// var modalImg = document.getElementById("img01");
-			modal.style.display = "block";
-			// modalImg.src = img.src;
-			// captionText.innerHTML = img.alt;
-
-			var span = document.getElementsByClassName("close")[1];
-			var span2 = document.getElementsByClassName("modal")[1];
-			span2.onclick = function () {
-				modal.style.display = "none";
-			}
-			span.onclick = function () {
-				modal.style.display = "none";
-			}
-		}
-
-		function irABD(){
-			window.location.href = "./plantillas/ABD/index.html";
-		}
-	</script>
+                        <div class="content resume">
+                            <!-- title -->
+                            <div class="title">
+                                <div class="first-letter">Experiencia</div>
+                            </div>
+
+                            <!-- content -->
+                            <div class="row">
+                                <!-- experience -->
+                                <div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+                                    <div class="resume-title border-line-h">
+                                        <div class="icon"><i class="fa fa-briefcase"></i></div>
+                                        <div class="name">Experiencia</div>
+                                    </div>
+                                    <div class="resume-items">
+                                        <div class="resume-item border-line-h active">
+                                            <div class="date">Oct 2022 - Actual</div>
+                                            <div class="name">Ingeniero TI (Desarrollador Full Stack)</div>
+                                            <br />
+                                            <div class="company">Grupo CISA (CDMX)</div>
+                                            <br />
+                                            <p>
+                                                - Responsable del <span class="word_blue">desarrollo WEB y MOBILE. </span> En ambos casos el
+                                                <span class="word_blue">Front y Back.</span> <br />
+                                                - <span class="word_blue"> Gestión y Administración</span> de la cuenta de
+                                                <span class="word_blue"> PLAY STORE</span>, para subir y actualizar apps. <br />
+                                                - <span class="word_blue"> Levantamiento de requerimientos</span> con dueños de procesos en diferentes
+                                                áreas de la empresa. <br />Entre mis logros está el desarrollo de un sistema integral para llevar
+                                                procesos operativos y administrativos <span class="word_blue"> conectado al ERP</span> de la empresa.
+                                                <br />
+                                                - A la fecha tengo 2 aplicaciones desarrolladas y publicadas con ellos.<br />
+                                                <a
+                                                    href="https://play.google.com/store/apps/details?id=com.cisa.cisapp"
+                                                    target="_blank"
+                                                    class="word_blue"
+                                                >
+                                                    Click para ver App 1 (CISA APP)
+                                                </a>
+                                                <br />
+                                                <a
+                                                    href="https://play.google.com/store/apps/details?id=com.cisa.tmshmo"
+                                                    target="_blank"
+                                                    class="word_blue"
+                                                >
+                                                    Click para ver App 2 (TMS HMO)
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- education -->
+                                <div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+                                    <div class="resume-title border-line-h">
+                                        <div class="icon"><i class="fa fa-code"></i></div>
+                                        <div class="name">Desarrollo</div>
+                                    </div>
+                                    <div class="resume-items">
+                                        <div class="resume-item border-line-h active">
+                                            <div class="date word_blue">Apps</div>
+                                            <div class="name word_blue lgn">&#x2022; Framework Cordova</div>
+                                            <div class="name word_blue lgn">&#x2022; Framework 7</div>
+                                            <div class="name word_blue lgn">&#x2022; HTML</div>
+                                            <div class="name word_blue lgn">&#x2022; JavaScript</div>
+                                            <div class="name word_blue lgn">&#x2022; Jquery</div>
+                                            <div class="name word_blue lgn">&#x2022; SqLite</div>
+                                            <div class="name word_blue lgn">&#x2022; AJAX</div>
+                                            <div class="name word_blue lgn">&#x2022; JSON</div>
+                                            <div class="name word_blue lgn">&#x2022; Android Studio</div>
+                                            <div class="name word_blue lgn">&#x2022; CSS</div>
+                                            <div class="name lgn">&#x2022; APIS de Google</div>
+                                        </div>
+                                    </div>
+                                    <div class="resume-items">
+                                        <div class="resume-item border-line-h active">
+                                            <div class="date word_blue">Portales WEB</div>
+                                            <div class="name word_blue lgn">&#x2022; SQL SERVER</div>
+                                            <div class="name word_blue lgn">&#x2022; PHP</div>
+                                            <div class="name word_blue lgn">&#x2022; HTML</div>
+                                            <div class="name word_blue lgn">&#x2022; JavaScript</div>
+                                            <div class="name word_blue lgn">&#x2022; Jquery</div>
+                                            <div class="name word_blue lgn">&#x2022; AJAX</div>
+                                            <div class="name word_blue lgn">&#x2022; JSON</div>
+                                            <div class="name word_blue lgn">&#x2022; Consumo de APIs</div>
+                                            <div class="name word_blue lgn">&#x2022; Bootstrap</div>
+                                            <div class="name word_blue lgn">&#x2022; CSS</div>
+                                            <div class="name word_blue lgn">&#x2022; GitHub</div>
+                                            <div class="name word_blue lgn">&#x2022; Postman</div>
+                                            <div class="name word_blue lgn">&#x2022; IIlustrator</div>
+                                            <div class="name word_blue lgn">&#x2022; Photoshop</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col col-d-6 col-t-6 col-m-12 border-line-v" style="border-top: 1px solid #e6e5e5">
+                                    <div class="resume-items">
+                                        <div class="resume-item border-line-h active">
+                                            <div class="date">Oct 2021 - Oct 2022</div>
+                                            <div class="name">Desarrollador WEB</div>
+                                            <br />
+                                            <div class="company">Tech2B(FIELD) (CDMX)</div>
+                                            <br />
+                                            <p>
+                                                Participe en el desarrollo de una plataforma totalmente personalizable para pequeñas, medianas y
+                                                Grandes empresas. Con la premisa de <span class="word_blue">evidenciar el trabajo en campo</span>.
+                                                Logrado a traves de una <span class="word_blue">app movil y un portal Administrador WEB:</span> <br />
+                                                <br />
+                                                - <span class="word_blue">Generar reportes</span> del trabajo realizo por el personal de campo. <br />
+                                                - <span class="word_blue">Tomar fotografías</span> con el dispositivo movil.
+                                                <br />
+                                                - <span class="word_blue">Recolectar firmas.</span> <br />
+                                                - <span class="word_blue">Generar Gráficas y estadísticas</span> de las evidencias, horarios,
+                                                ubicaciones etc. <br />
+                                                <br />
+                                                Para conocer más de FIELD
+                                                <a href="https://field.com.mx/" target="_blank" class="word_blue">https://field.com.mx/</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- education -->
+                                <div class="col col-d-6 col-t-6 col-m-12 border-line-v" style="border-top: 1px solid #e6e5e5">
+                                    <div class="resume-items">
+                                        <div class="resume-item border-line-h active">
+                                            <div class="date word_blue">App</div>
+                                            <div class="name word_blue lgn">&#x2022; Framework Cordova</div>
+                                            <div class="name word_blue lgn">&#x2022; Framework 7</div>
+                                            <div class="name word_blue lgn">&#x2022; HTML</div>
+                                            <div class="name word_blue lgn">&#x2022; JavaScript</div>
+                                            <div class="name word_blue lgn">&#x2022; Jquery</div>
+                                            <div class="name word_blue lgn">&#x2022; SqLite</div>
+                                            <div class="name word_blue lgn">&#x2022; AJAX</div>
+                                            <div class="name word_blue lgn">&#x2022; JSON</div>
+                                            <div class="name word_blue lgn">&#x2022; Android Studio</div>
+                                            <div class="name word_blue lgn">&#x2022; CSS</div>
+                                        </div>
+                                        <div class="resume-items">
+                                            <div class="resume-item border-line-h active">
+                                                <div class="date word_blue">Portales WEB</div>
+                                                <div class="name word_blue lgn">&#x2022; MYSQL</div>
+                                                <div class="name word_blue lgn">&#x2022; PHP</div>
+                                                <div class="name word_blue lgn">&#x2022; HTML</div>
+                                                <div class="name word_blue lgn">&#x2022; JavaScript</div>
+                                                <div class="name word_blue lgn">&#x2022; Jquery</div>
+                                                <div class="name word_blue lgn">&#x2022; AJAX</div>
+                                                <div class="name word_blue lgn">&#x2022; JSON</div>
+                                                <div class="name word_blue lgn">&#x2022; Consumo de APIs</div>
+                                                <div class="name word_blue lgn">&#x2022; Bootstrap</div>
+                                                <div class="name word_blue lgn">&#x2022; CSS</div>
+                                                <div class="name word_blue lgn">&#x2022; GitHub</div>
+                                                <div class="name word_blue lgn">&#x2022; Postman</div>
+                                                <div class="name word_blue lgn">&#x2022; IIlustrator</div>
+                                                <div class="name word_blue lgn">&#x2022; Photoshop</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col col-d-6 col-t-6 col-m-12 border-line-v" style="border-top: 1px solid #e6e5e5">
+                                    <div class="resume-items">
+                                        <div class="resume-item border-line-h active">
+                                            <div class="date">Jun 2020 - Oct 2021</div>
+                                            <div class="name">Auxiliar de Sistemas</div>
+                                            <br />
+                                            <div class="company">Grupo AirCond (C. Izcalli)</div>
+                                            <br />
+                                            <p>
+                                                Me desempeñe como Auxiliar de Sistemas al inicio, pero por mi afan de más conocimiento y más aporte
+                                                empece a <span class="word_blue">desarrollar por mi cuenta</span> un portal que apoyaría al equipo de
+                                                monitoreo, para consultar datos de las unidades, poder actualizar los datos y agregar nuevos datos.
+                                                <br />
+                                                Se me dio la confianza para seguir desarrollando más aplicaciones:
+                                                <br />
+                                                <span class="word_blue">SISGAC</span>: ERP In House <br />
+                                                <span class="word_blue">APP Paquetería</span> en Android Studio para recepción de paquetes y entrega
+                                                de los mismos. <br />
+                                                <span class="word_blue">APP de checador</span> para la oficina en Android Studio. <br />
+                                                Para conocer mis Apps en Grupo AirCond
+                                                <a
+                                                    href="https://drive.google.com/drive/folders/1GFIoxrWjevB8JHLTSuUEHW7ovqNCOLh0?usp=sharing"
+                                                    target="_blank"
+                                                    class="word_blue"
+                                                    >Ir Portafolio</a
+                                                >
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- education -->
+                                <div class="col col-d-6 col-t-6 col-m-12 border-line-v" style="border-top: 1px solid #e6e5e5">
+                                    <div class="resume-items">
+                                        <div class="resume-item border-line-h active">
+                                            <div class="date word_blue">App</div>
+                                            <div class="name word_blue lgn">&#x2022; SqLite</div>
+                                            <div class="name word_blue lgn">&#x2022; Volley</div>
+                                            <div class="name word_blue lgn">&#x2022; JSON</div>
+                                            <div class="name word_blue lgn">&#x2022; Android Studio</div>
+                                            <div class="name word_blue lgn">&#x2022; JAVA</div>
+                                        </div>
+                                        <div class="resume-items">
+                                            <div class="resume-item border-line-h active">
+                                                <div class="date word_blue">Portales WEB</div>
+                                                <div class="name word_blue lgn">&#x2022; MYSQL</div>
+                                                <div class="name word_blue lgn">&#x2022; PHP</div>
+                                                <div class="name word_blue lgn">&#x2022; HTML</div>
+                                                <div class="name word_blue lgn">&#x2022; JavaScript</div>
+                                                <div class="name word_blue lgn">&#x2022; Jquery</div>
+                                                <div class="name word_blue lgn">&#x2022; AJAX</div>
+                                                <div class="name word_blue lgn">&#x2022; Bootstrap</div>
+                                                <div class="name word_blue lgn">&#x2022; CSS</div>
+                                            </div>
+                                        </div>
+                                        <div class="resume-item border-line-h active">
+                                            <div class="date word_blue">Otras Actividades</div>
+                                            <div class="name word_blue lgn">&#x2022; Soporte a oficina</div>
+                                            <div class="name word_blue lgn">&#x2022; Soporte a compañeros foráneos</div>
+                                            <div class="name word_blue lgn">&#x2022; IIlustrator</div>
+                                            <div class="name word_blue lgn">&#x2022; Photoshop</div>
+                                            <div class="name word_blue lgn">&#x2022; Marketing (Google ADS, Facebook)</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-inner" id="conocimientos">
+                    <div class="card-wrap">
+                        <div class="content about">
+                            <!-- title -->
+                            <div class="title"><span class="first-word">O</span>tros Conocimientos</div>
+
+                            <!-- content -->
+                            <div class="row">
+                                <!-- skill item -->
+                                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                                    <div class="skills-list list">
+                                        <ul>
+                                            <li>
+                                                <div>
+                                                    <span class="material-icons" style="color: #3498db !important; margin-right: 15px">insights</span
+                                                    >Desarrollo con Metodología de Scrum
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <span class="material-icons" style="color: #3498db !important; margin-right: 15px"
+                                                        >mobile_friendly</span
+                                                    >
+                                                    Desarrollo de apps Híbridas
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <span class="material-icons" style="color: #3498db !important; margin-right: 15px"
+                                                        >door_front</span
+                                                    >Desarrollo Front End
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <span class="material-icons" style="color: #3498db !important; margin-right: 15px"
+                                                        >view_agenda</span
+                                                    >Desarrollo Back End
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div>
+                                                    <span class="material-icons" style="color: #3498db !important; margin-right: 15px"
+                                                        >account_tree</span
+                                                    >Levantamiento de Requerimientos
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <span class="material-icons" style="color: #3498db !important; margin-right: 15px">wallpaper</span
+                                                    >Uso de Photoshop
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <span class="material-icons" style="color: #3498db !important; margin-right: 15px">satellite</span
+                                                    >Uso de IIlustrator
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <span class="material-icons" style="color: #3498db !important; margin-right: 15px">print</span
+                                                    >Hojas de Impresión
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <span class="material-icons" style="color: #3498db !important; margin-right: 15px">groups</span
+                                                    >Trabajo en equipo
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <span class="material-icons" style="color: #3498db !important; margin-right: 15px"
+                                                        >support_agent</span
+                                                    >Soporte y capcitación a Usuarios.
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-inner" id="galeria">
+                    <div class="card-wrap">
+                        <div class="content about">
+                            <!-- title -->
+                            <div class="title"><span class="first-word">G</span>aleria</div>
+
+                            <!-- content -->
+                            <div class="row">
+                                <!-- skill item -->
+                                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                                    <div class="title"><span class="first-word">Aplicaciones </span>en Grupo CISA</div>
+                                    <div id="myCarouselCustom" class="carousel slide" data-ride="carousel">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#myCarouselCustom" data-slide-to="0" class="active"></li>
+                                            <li data-target="#myCarouselCustom" data-slide-to="1"></li>
+                                            <li data-target="#myCarouselCustom" data-slide-to="2"></li>
+                                            <li data-target="#myCarouselCustom" data-slide-to="3"></li>
+                                            <li data-target="#myCarouselCustom" data-slide-to="4"></li>
+                                            <li data-target="#myCarouselCustom" data-slide-to="5"></li>
+                                            <li data-target="#myCarouselCustom" data-slide-to="6"></li>
+                                            <li data-target="#myCarouselCustom" data-slide-to="7"></li>
+                                            <li data-target="#myCarouselCustom" data-slide-to="8"></li>
+                                            <li data-target="#myCarouselCustom" data-slide-to="9"></li>
+                                        </ol>
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <img src="./img/lg-1.jpg" alt="" id="img1" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/lg-2.jpg" alt="" id="img2" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/lg-3.jpg" alt="" id="img3" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/lg-4.jpg" alt="" id="img4" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/lg-5.jpg" alt="" id="img5" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/lg-15.jpg" alt="" id="img15" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/lg-16.jpg" alt="" id="img16" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/lg-17.jpg" alt="" id="img17" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/lg-18.jpg" alt="" id="img18" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/lg-19.jpg" alt="" id="img19" onclick="Imgs(this.id)" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="title"><span class="first-word">Portal Administrador</span> en Grupo CISA</div>
+                                    <div id="myCarouselCustom2" class="carousel slide" data-ride="carousel">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#myCarouselCustom2" data-slide-to="0" class="active"></li>
+                                            <li data-target="#myCarouselCustom2" data-slide-to="1"></li>
+                                            <li data-target="#myCarouselCustom2" data-slide-to="2"></li>
+                                            <li data-target="#myCarouselCustom2" data-slide-to="3"></li>
+                                            <li data-target="#myCarouselCustom2" data-slide-to="4"></li>
+                                            <li data-target="#myCarouselCustom2" data-slide-to="5"></li>
+                                            <li data-target="#myCarouselCustom2" data-slide-to="6"></li>
+                                            <li data-target="#myCarouselCustom2" data-slide-to="7"></li>
+                                            <li data-target="#myCarouselCustom2" data-slide-to="8"></li>
+                                        </ol>
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <img src="./img/sm-7.jpg" alt="" id="img20" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/sm-8.jpg" alt="" id="img21" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/sm-9.jpg" alt="" id="img22" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/sm-10.jpg" alt="" id="img23" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/sm-11.jpg" alt="" id="img24" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/sm-1.jpg" alt="" id="img6" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/sm-2.jpg" alt="" id="img7" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/sm-3.jpg" alt="" id="img8" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/sm-4.jpg" alt="" id="img9" onclick="Imgs(this.id)" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="title"><span class="first-word">Aplicaciones</span> FIELD</div>
+                                    <div id="myCarouselCustom3" class="carousel slide" data-ride="carousel">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#myCarouselCustom3" data-slide-to="0" class="active"></li>
+                                            <li data-target="#myCarouselCustom3" data-slide-to="1"></li>
+                                            <li data-target="#myCarouselCustom3" data-slide-to="2"></li>
+                                            <li data-target="#myCarouselCustom3" data-slide-to="3"></li>
+                                            <li data-target="#myCarouselCustom3" data-slide-to="4"></li>
+                                        </ol>
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <img src="./img/lg-6.jpg" alt="" id="img10" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/lg-7.jpg" alt="" id="img11" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/lg-8.jpg" alt="" id="img12" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/sm-5.jpg" alt="" id="img13" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/sm-6.jpg" alt="" id="img14" onclick="Imgs(this.id)" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div class="title"><span class="first-word">Proyectos</span> Extras</div>
+                                    <div id="myCarouselCustom4" class="carousel slide" data-ride="carousel">
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#myCarouselCustom4" data-slide-to="0" class="active"></li>
+                                            <li data-target="#myCarouselCustom4" data-slide-to="1"></li>
+                                            <li data-target="#myCarouselCustom4" data-slide-to="2"></li>
+                                            <li data-target="#myCarouselCustom4" data-slide-to="3"></li>
+                                            <li data-target="#myCarouselCustom4" data-slide-to="4"></li>
+                                            <li data-target="#myCarouselCustom4" data-slide-to="5"></li>
+                                        </ol>
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <img src="./img/sm-12.jpg" alt="" id="img25" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/sm-13.jpg" alt="" id="img26" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/sm-14.jpg" alt="" id="img27" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/sm-15.jpg" alt="" id="img28" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/sm-16.jpg" alt="" id="img29" onclick="Imgs(this.id)" />
+                                            </div>
+
+                                            <div class="item">
+                                                <img src="./img/sm-17.jpg" alt="" id="img30" onclick="Imgs(this.id)" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="card-inner" id="plantillas">
+                    <div class="card-wrap">
+                        <div class="content about">
+                            <div class="title"><span class="first-word">P</span>lantilllas</div>
+
+                            <div class="row">
+                                
+                                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                                    <div class="title"><span class="first-word">No. 1</span> Ollice</div>
+                                    <img src="./img/plantillas/ollie.png" style="width: inherit" id="plantilla_1" onclick="plantilla(this.id)" />
+                                </div>
+
+                                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                                    <div class="title"><span class="first-word">No. 2</span> Solar</div>
+                                    <img src="./img/plantillas/solar.png" style="width: inherit" id="plantilla_2" onclick="plantilla(this.id)" />
+                                </div>
+
+                                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                                    <div class="title"><span class="first-word">No. 3</span> Simple</div>
+                                    <img src="./img/plantillas/simple.png" style="width: inherit" id="plantilla_3" onclick="plantilla(this.id)" />
+                                </div>
+
+                                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                                    <div class="title"><span class="first-word">No. 4</span> Nurgo</div>
+                                    <img src="./img/plantillas/nurgo.png" style="width: inherit" id="plantilla_4" onclick="plantilla(this.id)" />
+                                </div>
+
+                                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                                    <div class="title"><span class="first-word">No. 5</span> Little</div>
+                                    <img src="./img/plantillas/little.png" style="width: inherit" id="plantilla_5" onclick="plantilla(this.id)" />
+                                </div>
+
+                                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                                    <div class="title"><span class="first-word">No. 6</span> LimeLight</div>
+                                    <img src="./img/plantillas/limelight.png" style="width: inherit" id="plantilla_6" onclick="plantilla(this.id)" />
+                                </div>
+
+                                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                                    <div class="title"><span class="first-word">No. 7</span> Koppe</div>
+                                    <img src="./img/plantillas/koppe.png" style="width: inherit" id="plantilla_7" onclick="plantilla(this.id)" />
+                                </div>
+
+                                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                                    <div class="title"><span class="first-word">No. 8</span> Inance</div>
+                                    <img src="./img/plantillas/inance.png" style="width: inherit" id="plantilla_8" onclick="plantilla(this.id)" />
+                                </div>
+
+                                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                                    <div class="title"><span class="first-word">No. 9</span> Heustonn</div>
+                                    <img src="./img/plantillas/heustonn.png" style="width: inherit" id="plantilla_9" onclick="plantilla(this.id)" />
+                                </div>
+
+                                <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                                    <div class="title"><span class="first-word">No. 10</span> Template</div>
+                                    <img src="./img/plantillas/template.png" style="width: inherit" id="plantilla_10" onclick="plantilla(this.id)" />
+                                </div>
+
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div id="popUp" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01" />
+            <div id="caption"></div>
+        </div>
+
+        <div id="popUp1" class="modal">
+            <span class="close">&times;</span>
+            <div class="col-lg-12" style="margin-top: -40px">
+                <iframe id="frameHTML" src="" style="width: 100%; height: 90vh"></iframe>
+            </div>
+        </div>
+
+        <link rel="stylesheet" href="./css/bar.css" />
+        <script>
+            $("#ref_about").click(function () {
+                $(".card-inner").removeClass("active");
+                $("#about-card").addClass("active");
+
+                $(".li-menu").removeClass("active");
+                $("#li_abaout").addClass("active");
+            });
+            $("#ref_resumen").click(function () {
+                $(".card-inner").removeClass("active");
+                $("#resume-card").addClass("active");
+
+                $(".li-menu").removeClass("active");
+                $("#li_resumen").addClass("active");
+            });
+            $("#ref_mail").click(function () {
+                $(".card-inner").removeClass("active");
+                $("#conocimientos").addClass("active");
+
+                $(".li-menu").removeClass("active");
+                $("#li_conocimientos").addClass("active");
+            });
+            $("#ref_galery").click(function () {
+                $(".card-inner").removeClass("active");
+                $("#galeria").addClass("active");
+
+                $(".li-menu").removeClass("active");
+                $("#li_galeria").addClass("active");
+            });
+            $("#ref_plantillas").click(function () {
+                $(".card-inner").removeClass("active");
+                $("#plantillas").addClass("active");
+
+                $(".li-menu").removeClass("active");
+                $("#li_plantillas").addClass("active");
+            });
+
+            // Call carousel manually
+            $("#myCarouselCustom").carousel({
+                interval: 3000,
+                wrap: true,
+            });
+            $("#myCarouselCustom2").carousel({
+                interval: 3000,
+                wrap: true,
+            });
+            $("#myCarouselCustom3").carousel({
+                interval: 3000,
+                wrap: true,
+            });
+
+            function Imgs(imga) {
+                var modal = document.getElementById("popUp");
+                var img = document.getElementById(imga);
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+                modal.style.display = "block";
+                modalImg.src = img.src;
+                captionText.innerHTML = img.alt;
+
+                var span = document.getElementsByClassName("close")[0];
+                var span2 = document.getElementsByClassName("modal")[0];
+                span2.onclick = function () {
+                    modal.style.display = "none";
+                };
+                span.onclick = function () {
+                    modal.style.display = "none";
+                };
+            }
+
+            function plantilla(id) {
+                var modal = document.getElementById("popUp1");
+                if (id == "plantilla_1") {
+                    $("#frameHTML").prop("src", "./plantillas/ollie/index.html");
+                } else if (id == "plantilla_2") {
+                    $("#frameHTML").prop("src", "./plantillas/solar/index.html");
+                } else if (id == "plantilla_3") {
+                    $("#frameHTML").prop("src", "./plantillas/simple/index.html");
+                } else if (id == "plantilla_4") {
+                    $("#frameHTML").prop("src", "./plantillas/nurgo/index.html");
+                } else if (id == "plantilla_5") {
+                    $("#frameHTML").prop("src", "./plantillas/little/index.html");
+                } else if (id == "plantilla_6") {
+                    $("#frameHTML").prop("src", "./plantillas/limelight/index.html");
+                } else if (id == "plantilla_7") {
+                    $("#frameHTML").prop("src", "./plantillas/koppee/index.html");
+                } else if (id == "plantilla_8") {
+                    $("#frameHTML").prop("src", "./plantillas/inance/index.html");
+                } else if (id == "plantilla_9") {
+                    $("#frameHTML").prop("src", "./plantillas/heustonn/index.html");
+                } else if (id == "plantilla_10") {
+                    $("#frameHTML").prop("src", "./plantillas/template/index.html");
+                }
+                // var img = document.getElementById(imga);
+                // var modalImg = document.getElementById("img01");
+                modal.style.display = "block";
+                // modalImg.src = img.src;
+                // captionText.innerHTML = img.alt;
+
+                var span = document.getElementsByClassName("close")[1];
+                var span2 = document.getElementsByClassName("modal")[1];
+                span2.onclick = function () {
+                    modal.style.display = "none";
+                };
+                span.onclick = function () {
+                    modal.style.display = "none";
+                };
+            }
+
+            function irABD() {
+                window.location.href = "./plantillas/ABD/index.html";
+            }
+        </script>
+    </body>
+</html>
