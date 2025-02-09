@@ -402,6 +402,7 @@ function crearElementToaddimmg(ID) {
         let formData = new FormData();
         if (fileInput.length > 0) {
             for (i = 0; i < fileInput.length; i++) {
+                //*! Descartar el prod no debe estar comentado
                 if (fileInput[i].status != "success") {
                     console.log(fileInput[i].status);
                     if (fileInput[i].status == "uploading") {
@@ -1031,6 +1032,7 @@ function crearElementToaddimmgServices(ID) {
         let formData = new FormData();
         if (fileInput.length > 0) {
             for (i = 0; i < fileInput.length; i++) {
+                //*! Descartar el prod no debe estar comentado
                 if (fileInput[i].status != "success") {
                     console.log(fileInput[i].status);
                     if (fileInput[i].status == "uploading") {

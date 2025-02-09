@@ -1591,3 +1591,50 @@ function traeServicios() {
             console.log("error: " + jqXHR.responseText + "\nEstatus: " + textStatus + "\nError: " + errorThrown);
         });
 }
+
+function saveDataContacto() {
+    let nombre_in = $("#nombre_in").val();
+    let email_in = $("#email_in").val();
+    let mensaje = $("#mensaje").val();
+    if (!nombre_in) {
+        return false;
+    }
+
+    if (!email_in) {
+        return false;
+    }
+
+    if (!mensaje) {
+        return false;
+    }
+
+    preloader.show();
+    $.ajax({
+        method: "POST",
+        dataType: "JSON",
+        url: "./views/contacto/saveDataContacto.php",
+        data: { nombre_in, email_in, mensaje },
+    })
+        .done(function (results) {
+            let success = results.success;
+            let result = results.result;
+            switch (success) {
+                case true:
+                    Swal.fire({ icon: "success", title: "", text: "Mensaje enviado correctamente." });
+                    $("#nombre_in").val("");
+                    $("#email_in").val("");
+                    $("#mensaje").val("");
+                    preloader.hide();
+                    break;
+                case false:
+                    preloader.hide();
+                    Swal.fire({ icon: "warning", title: "", text: "Algo salio mal vuelve a intentarlo." });
+                    break;
+            }
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            preloader.hide();
+            Swal.fire({ icon: "warning", title: "", text: "Algo salio mal vuelve a intentarlo." });
+            console.log("error: " + jqXHR.responseText + "\nEstatus: " + textStatus + "\nError: " + errorThrown);
+        });
+}
